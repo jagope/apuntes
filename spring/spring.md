@@ -174,6 +174,6 @@ Si se define más de un PropertyPlaceholderConfigurer dentro del mismo contexto,
 que haya cargado primero, si no encuentra esta variable en el fichero properties lanzará un error. Para evitar que lance el error y hay que añadir la siguiente propiedad 
 en todos los PropertyPlaceHolderConfigurer:
 ´´´
-<property name="ignoreUnresolvablePlaceholders" value="true"/>
+&lt;property name="ignoreUnresolvablePlaceholders" value="true" /&gt;
 ´´´
 Con esta propiedad, si no encuentra la variable en el primer PropertyPlaceholderConfigurer, pasará a buscarla en el siguiente.
