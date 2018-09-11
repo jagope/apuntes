@@ -156,7 +156,7 @@ public EmbeddedDatabase dataSource() {
 Esta clase nos permite extraer parametrizaciones del fichero de configuración de Spring y ubicarlas en ficheros de propiedades. 
 Podremos acceder al valor de la variable de la siguiente manera:  ${variable}.
 
-´´´xml
+```xml
 <bean
  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 <property name="location">
@@ -168,12 +168,12 @@ Podremos acceder al valor de la variable de la siguiente manera:  ${variable}.
  <property name="url" value="${url}"></property>
  <property name="puerto" value="${puerto}"></property>
  </bean>
-´´´
+```
 
 Si se define más de un PropertyPlaceholderConfigurer dentro del mismo contexto, spring intentará recuperar la variable del PropertyPlaceholderConfigurer
 que haya cargado primero, si no encuentra esta variable en el fichero properties lanzará un error. Para evitar que lance el error y hay que añadir la siguiente propiedad 
 en todos los PropertyPlaceHolderConfigurer:
-´´´
+```
 &lt;property name="ignoreUnresolvablePlaceholders" value="true" /&gt;
-´´´
+```
 Con esta propiedad, si no encuentra la variable en el primer PropertyPlaceholderConfigurer, pasará a buscarla en el siguiente.
