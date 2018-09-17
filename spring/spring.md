@@ -57,7 +57,7 @@ private <bean_class> <variable_name>;
 creará un bean de la clase en el contexto. Será necesario incluir la etiqueta ```<context:component-scan base-package=”<package>” />``` en el contexto de spring
 
 ej:
-```
+```java
 @Component(value=”<bean_id”>)
 public class <class_name> {
 }
@@ -76,23 +76,32 @@ Indica a Spring que se trata de un elemento que suministra datos
 Create a resource controller, approach to building RESTful web services
 
 #### @RequestMapping
+
 #### @RequestParam
 parametros /path?name=valor
+
 #### @PathVariable
 parametros /path/{param}
+
 #### @RequestBody
 
+```java
 @RequestMapping(value=”<url>”[, method=<[RequestMethod.GET | RequestMethod.POST]>])
+```
 se le puede asignar a la clase o a un método. Se ejecuta cuando la <url> de la request coincide con la <url> de la anotación, se puede especificar si tiene que responder al método POST o GET.
 
+```java
 @RequestParam(value=”<name>”[ ,required=”<[true | false]”, defaultValue=”<default>” )
+```
 se asigna a un parámetro de un método, introduce en el parámetro del valor del parámetro
 <value> al campo, ej:
 
 url: /eliminarProyecto.io?id=4
 
+```java
 @RequestMapping(value=”eliminarProyecto.io”)
 public String eliminarProyecto(@RequestParam(“id”) int idProyecto) { … };
+```
 
 ### @PostConstruct
 Se establece en un método que se llamara cuando se cree el bean
