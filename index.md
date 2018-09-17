@@ -2,7 +2,7 @@
 
 ### Java
 
-[JAX-WS]({{ site.baseurl }}{% link java/JAX-WS.md %})
+- [JAX-WS]({{ site.baseurl }}{% link java/JAX-WS.md %})
 
 # Frameworks
 
@@ -11,3 +11,5 @@
 - [REST]({{ site.baseurl }}{% link spring/rest.md %})
 
 ### Hibernate
+
+- [Hibernate]({{ site.baseurl }}{% link hibernate.md %})
