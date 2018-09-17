@@ -94,7 +94,7 @@ se le puede asignar a la clase o a un método. Se ejecuta cuando la <url> de la 
 @RequestParam(value=”<name>”[ ,required=”<[true | false]”, defaultValue=”<default>” )
 ```
 se asigna a un parámetro de un método, introduce en el parámetro del valor del parámetro
-<value> al campo, ej:
+&lt;value&gt; al campo, ej:
 
 url: /eliminarProyecto.io?id=4
 
