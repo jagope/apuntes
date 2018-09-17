@@ -26,7 +26,7 @@ Activa el profile &lt;profile_name&gt;
 public <interface> <method_name>() {
 	return new <interface>Impl();
 }
-
+```
 ### @Autowired
 Inyectará automáticamente la dependencia en la propiedad donde esté definido. 
 Asocia el ```bean``` según este orden de criterio:
@@ -105,7 +105,7 @@ Se establece en un método que se llamara cuando se vaya a destruir el bean
 ```xml
 <context:annotation-config/>
 ```
-Configura spring para que injecte los beans correspondientes en los campos anotaddos con @Autowired
+Configura spring para que injecte los beans correspondientes en los campos anotados con @Autowired
 
 ```xml
 <context:component-scan base-package="">
@@ -126,7 +126,7 @@ bean definition
 <%taglib uri=”http://www.springframework.org/tags/form” prefix=”form” %>
 ```
 
-## Bases de datos embebidas
+## 1. Bases de datos embebidas
 
 When you wish to expose an embedded database instance as a bean in a Spring ApplicationContext, use the embedded-database tag in the spring-jdbc namespace:
 
@@ -151,7 +151,7 @@ public EmbeddedDatabase dataSource() {
 }
 ```
 
-## PropertyPlaceHolderConfigurer
+## 2. PropertyPlaceHolderConfigurer
 
 Esta clase nos permite extraer parametrizaciones del fichero de configuración de Spring y ubicarlas en ficheros de propiedades. 
 Podremos acceder al valor de la variable de la siguiente manera:  ${variable}.
@@ -176,3 +176,40 @@ en todos los PropertyPlaceHolderConfigurer:
 <property name="ignoreUnresolvablePlaceholders" value="true" />
 ```
 Con esta propiedad, si no encuentra la variable en el primer PropertyPlaceholderConfigurer, pasará a buscarla en el siguiente.
+
+## 3. Exception Handling
+
+#### Controller based
+We can define exception handler methods in our controller classes. All we need is to annotate these methods with @ExceptionHandler annotation
+
+```java
+@ExceptionHandler(CustomGenericException.class)
+public ModelAndView handleCustomException(CustomGenericException ex) {
+
+	ModelAndView model = new ModelAndView("error/generic_error");
+	model.addObject("errCode", ex.getErrCode());
+	model.addObject("errMsg", ex.getErrMsg());
+
+	return model;
+}
+```
+
+#### Global Exception Handler
+
+The handler methods in Global Controller Advice is same as Controller based exception handler methods and used when controller class is not able to handle the exception.
+
+```java
+@ControllerAdvice
+public class GlobalExceptionController {
+
+@ExceptionHandler(CustomGenericException.class)
+public ModelAndView handleCustomException(CustomGenericException ex) {
+
+	ModelAndView model = new ModelAndView("error/generic_error");
+	model.addObject("errCode", ex.getErrCode());
+	model.addObject("errMsg", ex.getErrMsg());
+
+	return model;
+
+}
+```
