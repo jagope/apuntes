@@ -2,6 +2,7 @@
 
 ### Java
 
+- [Patterns]({{ site.baseurl }}{% link java/patterns.md %})
 - [JAX-WS]({{ site.baseurl }}{% link java/JAX-WS.md %})
 
 # Frameworks
