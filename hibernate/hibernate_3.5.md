@@ -35,11 +35,18 @@ import org.hibernate.cfg.Configuration;
 ```
 
 ### Propiedades
-<kbd>hibernate.show_sql</kbd>: especifica si se deben mostrar en el log las sqls ejecutadas.
+Todos los nombres de las propiedades de Hibernate y su semántica están definidas en la clase org.hibernate.cfg.Environment
+
+Algunas de las más importantes son:
+
 <kbd>hibernate.dialect</kbd>:
+
 <kbd>hibernate.conection.driver_class</kbd>:
+
 <kbd>hibernate.conection.url</kbd>:
+
 <kbd>hibernate.conection.username</kbd>:
+
 <kbd>hibernate.conection.password</kbd>:
 
 ## Definici&oacute;n de entidades
