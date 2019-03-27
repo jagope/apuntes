@@ -60,4 +60,5 @@ An Adapter pattern acts as a connector between two incompatible interfaces that 
 The main motive behind using this pattern is to convert an existing interface into another interface that the client expects.
 
 Example:
+
 ![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/adapter.jpg)
