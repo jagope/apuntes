@@ -44,7 +44,7 @@ ej:
 private <bean_class> <variable_name>;
 ```
 
-### Qualifier
+### @Qualifier
 Se usa para controlar que ```bean``` se debe inyectar en la propiedad
 ej: 
 ```
@@ -66,14 +66,14 @@ public class <class_name> {
 ### @Controller
 Indica a Spring que se trata de un Controlador, con la funcionalidad que ello implica
 
+### @RestController
+Create a resource controller, approach to building RESTful web services
+
 ### @Service
 Indica a Spring que se trata de un elemento de negocio
 
 ### @Repository
 Indica a Spring que se trata de un elemento que suministra datos
-
-### @RequestController
-Create a resource controller, approach to building RESTful web services
 
 #### @RequestMapping
 
