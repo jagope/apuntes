@@ -4,6 +4,8 @@ JUnit 5 requires Java 8 (or higher) at runtime. However, you can still test code
 
 ## Use in spring boot
 
+### How to configure
+
 Exclude junit in the spring-boot-starter-test, and include the JUnit 5 jupiter engine dependency
 
 ```xml
@@ -29,4 +31,15 @@ Exclude junit in the spring-boot-starter-test, and include the JUnit 5 jupiter e
   </dependency>
   ...
 </dependecies>
+```
+
+### How to write test
+
+The test has to be annotated with @ExtendWith(SpringExtension.class)
+
+```java
+@ExtendWith(SpringExtension.class)
+public class ClassTest {
+  ...
+}
 ```
