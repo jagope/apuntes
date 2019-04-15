@@ -1,6 +1,15 @@
-## Test
+# Test
 
-### Integration Test
+## Starter
+
+```xml
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+	</dependency>
+```
+
+## Integration Test
 
 Al añadir la anotación ```@SpringBootTest``` conseguimos que se levante la aplicación, ej:
 
@@ -26,4 +35,14 @@ Accedemos a la uri con la clase ```TestRestTemplate```, ej:
 				entity,
 				String.class);
 
+```
+
+# Security
+
+## starter
+```xml
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-security</artifactId>
+	</dependency>
 ```
