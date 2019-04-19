@@ -1,0 +1,50 @@
+# Java 7
+
+## Clase Objects
+
+La clase Objects nos ofrece los mÃ©todos:
+* <code>static boolean equals(Object a, Object b)</code>
+* <code>static int hash(Object... values)</code>
+* <code>static int hashCode(Object o)</code>
+
+que nos ayudaran a simplificar los mÃ©todos equals y hashCode
+
+```java
+@Override
+public boolean equals( Object obj ) {
+    if ( obj == null ) {
+        return false;
+    }
+        
+    if ( this == obj ) {
+        return true;
+    }
+        
+    if ( getClass() != obj.getClass() ) {
+        return false;
+    }
+        
+    final PersonObjects other = (PersonObjects) obj;
+    if( !Objects.equals( email, other.email ) ) {
+        return false;
+    } else if( !Objects.equals( firstName, other.firstName ) ) {
+        return false;            
+    } else if( !Objects.equals( lastName, other.lastName ) ) {
+        return false;            
+    }
+        
+    return true;
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash( email, firstName, lastName );
+}  
+```
+
+## Diamond operator
+
+```java
+final Map< String, Collection< String > > map = new HashMap<>();
+```
+The compiler is able to infer the generics type parameters from the left side and allows omitting them in the right side of the expression
