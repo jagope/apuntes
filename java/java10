@@ -1,0 +1,22 @@
+# Java 10
+
+## Var
+Podremos utilizar var para crear objetos sin tener que definir el tipo
+
+```java
+var list = List.of(1, 2, 3);
+var example = "example";
+var team = new Team();
+```
+
+## New Methods for Collections
+
+### copyOf
+
+ para crear copias inmutables de List, Set y Map. Al igual que con el método of(), tendremos una UnsupportedOperationException si intentamos añadir elementos
+ 
+ ```java
+ List<Integer> listCopyOf = List.copyOf(list);
+Set<String> setCopyOf = Set.copyOf(set);
+Map<String, String> mapCopyOf = Map.copyOf(map)
+```
