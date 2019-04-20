@@ -1,7 +1,9 @@
 # Java 10
 
 ## Var
-Podremos utilizar var para crear objetos sin tener que definir el tipo
+
+Podemos utilizar var para crear objetos sin tener que definir el tipo, cuando asignamos un valor a la variable,
+el tipo de la expresión define el tipo de la variable.
 
 ```java
 var list = List.of(1, 2, 3);
