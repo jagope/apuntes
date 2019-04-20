@@ -2,7 +2,12 @@
 
 The main idea of it is to ensure that only one single instance of the class could be created at any given time.
 
-#### Static block initialisation
+### Types of instantiation:
+
+#### Eager/early instantiation
+
+Instantiated while the class gets loaded.
+
 ```java
 public class <class_name> {
 
@@ -18,7 +23,10 @@ public class <class_name> {
 }
 ```
 
-#### Lazy Initialisation
+#### Lazy instantiation
+
+Instantiation is delayed until the caller method needs the singleton instance.
+
 ```java
 public class <class_name> {
 	    private static <class_name> instance; 
