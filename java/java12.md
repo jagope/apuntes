@@ -2,7 +2,8 @@
 
 ## Switch
 
-switch has become an expresion which evaluates the contents of the switch to produce a result. It does not impact backward compatibility.
+Switch has become an expresion which evaluates the contents of the switch to produce a result. It does not impact backward compatibility.
+This is a preview feature, so be aware that it may change in future releases. Until it’s stabilized, don’t bet too much of your internal code on it and never publish code that uses it. To use it in experiments, add --enable-preview to compiler and JVM commands
 
 ```java
 int numLetters = switch (day) {
