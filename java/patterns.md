@@ -70,3 +70,31 @@ The main motive behind using this pattern is to convert an existing interface in
 Example:
 
 ![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/adapter.jpg)
+
+## Visitor
+
+Allows for one or more operation to be applied to a set of objects at runtime, decoupling the operations from the object structure.
+
+```java
+public interface Visitable {
+  public void accept(Visitor visitor);
+}
+ 
+public class Book implements Visitable {
+   .......
+   @Override public void accept(Visitor visitor) {visitor.visit(this)};
+   .......
+}
+ 
+public class Cd implements Visitable {
+   .......
+   @Override public void accept(Visitor visitor) {visitor.visit(this)};
+   .......
+}
+ 
+interface Visitor {
+   public void visit(Book book);
+   public void visit(Magazine magazine);
+   public void visit(Cd cd);
+}
+```
