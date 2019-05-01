@@ -46,3 +46,20 @@ Accedemos a la uri con la clase ```TestRestTemplate```, ej:
 		<artifactId>spring-boot-starter-security</artifactId>
 	</dependency>
 ```
+
+# Scheduling
+
+```java
+@Configuration
+@EnableScheduling
+public class Configuration() {
+	...
+}
+´´´
+
+```java
+@Scheduled(fixedRate=60000)
+public void method() {
+	...
+}
+```
