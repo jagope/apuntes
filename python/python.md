@@ -90,3 +90,12 @@ del spam[4]
 for i in [1, 3, 4]:
   print(i)    
 ```
+
+### Control de excepciones
+
+```python
+try:
+  ...
+except <exception>:
+  ...
+```
