@@ -83,3 +83,10 @@ del spam[4]
 ```python
  4 not in [1, 3, 4]
 ```
+
+### For
+
+```python
+for i in [1, 3, 4]:
+  print(i)    
+```
