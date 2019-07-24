@@ -4,7 +4,7 @@
 
 ### Install with docker
 
-Se puede instalar usando contenedores en los sistemas operativos fedora, centos y red hat linux. Para ello hay que descargar el cliente de origin de https://github.com/openshift/origin/releases y ejecutar el comando ```oc cluster up```
+Se puede instalar usando contenedores en los sistemas operativos fedora, centos y red hat linux. Para ello hay que descargar el cliente de origin de https://github.com/openshift/origin/releases y añadir el comando oc al path: ```$ export PATH="$(pwd)":$PATH```
 
 Para que funcione hace falta configurar docker añadiendo la siguiente configuración en el fichero /etc/docker/daemon.json:
 ```json
@@ -12,6 +12,10 @@ Para que funcione hace falta configurar docker añadiendo la siguiente configura
   "insecure-registries":["172.30.0.0/16"]
 }
 ```
+
+Para descargar las imagenes necesarias y ejecutar los servicios ejecutar el comando ```$ oc cluster up```
+
+
 
 
 ### Install with minishift
