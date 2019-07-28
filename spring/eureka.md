@@ -21,3 +21,44 @@
 	    registerWithEureka: false
 	    fetchRegistry: false
 	```
+
+## Eureka client
+
+1. Add the dependencies
+	```xml
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	</dependency>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Finchley.SR2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	```
+1. Add @EnableDiscoveryClient annotation in main class
+
+1. Configure properties.yml:
+
+	```yml
+	eureka:
+	  client:
+	    serviceUrl:
+	      defaultZone: http://localhost:1111/eureka/
+	```
+1. Discover client
+	```java
+	@Autowire
+	private DiscoveryClient discoveryClient;
+	
+	...
+	
+	this.discoveryClient.getInstances(applicationName);
+	```
