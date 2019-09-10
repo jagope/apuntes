@@ -1,4 +1,10 @@
-## Singleton
+# Creational Patterns
+Creational patterns deal with the creation of objects.
+
+## The Prototype Pattern
+A Prototype represents a fully initialized instance, to be copied or cloned.
+
+## The Singleton pattern
 
 The main idea of it is to ensure that only one single instance of the class could be created at any given time.
 
@@ -50,14 +56,51 @@ public enum <enum_name> {
 
 ## Builder
 
-Builder design pattern is a creational design pattern it means its solves the problem related to creation of object.
+The Builder Pattern separates object construction from its representation.
 
 ```java
+public class Coffee {
+    class Coffee {
+        private Coffee(Builder builder) {
+            this.type = builder.type;
+	    ...
+        }
 
+        private String type;
+	...
+
+        public static class Builder {
+            private String type;
+	    ...
+
+	    public Builder sugar(String type) {
+                this.type = type;
+                return this;
+            }
+	    ...
+
+            public Coffee build() {
+                return new Coffee(this);
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Coffee coffee = new Coffee.Builder().type(true).build();
+    }
+}
 ```
+
 ## Factory
 
-It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
+The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
+
+# Structural Patterns
+Structural patterns deal with the composition of objects.
+
+# Behavioral Patterns
+Behavioral patterns focus more on the behavior of objects, or more precisely, interactions between objects.
 
 ## Dependency injection
 
