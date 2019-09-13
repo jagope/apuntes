@@ -54,7 +54,7 @@ public enum <enum_name> {
 }
 ```
 
-## Builder
+## The Builder Pattern
 
 The Builder Pattern separates object construction from its representation.
 
@@ -92,17 +92,21 @@ public class Coffee {
 }
 ```
 
-## Factory
+## The Factory Pattern
 
 The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
 
 # Structural Patterns
 Structural patterns deal with the composition of objects.
 
-# Behavioral Patterns
-Behavioral patterns focus more on the behavior of objects, or more precisely, interactions between objects.
+## The Proxy Pattern
+A Proxy is an object that represents another object.
 
-## Dependency injection
+## The Decorator Pattern
+The Decorator pattern allows us to add responsibilities to objects, dynamically.
+
+## The Facade Pattern
+A Facade is a single class that represents an entire subsystem.
 
 ## Adapter pattern
 
@@ -113,6 +117,13 @@ The main motive behind using this pattern is to convert an existing interface in
 Example:
 
 ![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/adapter.jpg)
+
+# Behavioral Patterns
+Behavioral patterns focus more on the behavior of objects, or more precisely, interactions between objects.
+
+## Dependency injection
+
+
 
 ## Visitor
 
