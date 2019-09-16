@@ -99,3 +99,9 @@ try:
 except <exception>:
   ...
 ```
+
+#### Lanzar una excepci&oacute;n
+
+```python
+raise exception(<description>)
+```
