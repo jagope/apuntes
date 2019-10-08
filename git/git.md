@@ -74,7 +74,7 @@ commit realizado
 
 ### Branchs
 ```sh
-> git branch [-r]
+> git branch
 ```
 Muestra las ramas que hay en local
 
