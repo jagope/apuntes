@@ -109,3 +109,7 @@ import <modulo>
 #### os
 
 Nos permite manipular la estructura de directorios, leer y escribir archivos.
+
+#### subprocess
+
+Nos permite trabajar de forma directa con órdenes del sistema operativo.
