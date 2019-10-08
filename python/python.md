@@ -21,12 +21,6 @@ def <nombre_funcion():
 ```input()```: lee la entrada de la consola
 
 
-### Importar módulos
-
-```python
-import <modulo>
-```
-
 ### Instrucciones de control
 
 #### if
@@ -105,3 +99,13 @@ except <exception>:
 ```python
 raise exception(<description>)
 ```
+
+### Módulos
+
+```python
+import <modulo>
+```
+
+#### os
+
+Nos permite manipular la estructura de directorios, leer y escribir archivos.
