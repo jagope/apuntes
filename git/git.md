@@ -1,26 +1,32 @@
 # Git
 
 ## Configurar git
+
+```sh
+> git config [--global | --system | --local] --list
+```
+Muestra todas las configuraciones del nivel especificado
+
 ```sh
 > git config --[system | global | local] <key> <value>
 ```
-Establece el valor <value> para la clase <key> en el nivel ([system | global | local]) correspondiente. Los valores en cada uno de los niveles sobreescribe el valor del anterior nivel. Por ejemplo:
+Establece el valor <value> para la clase <key> en el nivel ([system | global | local]) correspondiente. Los valores en cada uno de los niveles sobreescribe el valor del anterior nivel
 
 ```sh
 > git config --global user.name “Javier Gonzalo”
 > git config --global user.email jgonzalopelaez@gmail.com
 ```
 
-Para no tener problema con los finales de línea:
 ```sh
 > git config --global core.autocrlf true (en windows)
 > git config --global core.autocrlf input (en linux/mac)
 ```
+Para no tener problema con los finales de línea, en windows cambia los finales de línea, en linux/mac no los cambia.
 
-Para añadir un alias
 ```sh
 > git config --global alias.<alias> <comando>
 ```
+Añade un alias
 
 ## Comandos
 ```sh
@@ -113,27 +119,33 @@ Sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
 >git clone <repository> -> clona el proyecto contenido en <repository> a una carpeta local
 
 ### Tags
+
 ```sh
 > git tag
 ```
 Muestra todos los tags creados
 
-> git tag -a <tag> - m “<description>”
+```sh
+> git tag <tag> [-m <description>]
+```
+Crea en local una etiqueta con nombre &lt;tag&gt;, opcionalmente se le puede establecer una descripción
 
-crea en local una etiqueta con nombre <tag> y le asocia la descripción <description>
-
+```sh
 > git push --tags
+```
+Envia los tags al remoto
 
-envia los tags al remoto
-
+```sh
 > git tag d <tag>
+```
+Elimina de local la etiqueta &lt;tag&gt;
 
-elimina de local la etiqueta <tag>
-
+```sh
 > git push origin :refs/tags/<tag>
+```
+Elimina de remoto la etiqueta &lt;tag&gt;
 
-elimina de remoto la etiqueta <tag>
-
+#### Otros
 
 >git blame <file> -> nos dice quien ha escrito cada línea del fichero <file>
 >git fetch -> sincroniza nuestro repositorio local con el remoto, pero no actualiza nada de nuestro código
@@ -141,9 +153,6 @@ elimina de remoto la etiqueta <tag>
 >git log [--stat] [-n] -> muestra todos los mensajes de commit
 [--stat] -> muestra los ficheros incluidos en cada commit
 [-n] -> número de commits a mostrar
-
->git config [--global | --system | --local] <key> <value> -> guarda en la configuración el valor <value> para la clave <key>
->git config [--global | --system | --local] --list -> muestra todas las configuraciones
 
 >git cherry-pick [--edit] [--no-commit] <hash> -> copia un commit de otra rama con el hash <hash>
 Stash
