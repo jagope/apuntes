@@ -29,16 +29,9 @@ Para no tener problema con los finales de línea, en windows cambia los finales 
 Añade un alias
 
 ## Comandos
-```sh
-> git init
-```
- 
-Inicializa un repositorio git en el directorio actual.
+<kbd>$ git init</kbd>: inicializa un repositorio git en el directorio actual.
 
-```sh
-> git status
-```
-Muestra los cambios en el proyecto y los ficheros en el area de staging
+<kbd>$ git status</kbd>: muestra los cambios en el proyecto y los ficheros en el area de staging
 
 ```sh
 > git add <file>
@@ -72,7 +65,9 @@ commit realizado
 
 >git fetch <remote-name> -> trae toda la información disponible en el remoto <remote-name> que no tenemos todavía
 
-> git diff <file> -> muestra las diferencias del fichero <fichero> con respecto al último commit
+### Comparar ficheros
+<kbd>$ git diff [&lt;file&gt;]</kbd>: muestra las diferencias desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero desde el &uacute;ltimo commit.
+<kbd>$ git diff --staged [&lt;file&gt;]</kbd>: muestra las diferencias de los ficheros en el area de staging desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero (si está en el area de staging( desde el &uacute;ltimo commit.
 > git diff HEAD -> muestra las diferencias con respecto a nuestro último commit
 > git diff --staged -> muestra las diferencias con el area de staging
 > git diff --name-status master..<branch> -> muestra los ficheros que han cambiado entre la rama principal (master) y la rama <branch>
