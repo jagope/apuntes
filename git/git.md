@@ -33,15 +33,10 @@ Añade un alias
 
 <kbd>$ git status</kbd>: muestra los cambios en el proyecto y los ficheros en el area de staging
 
-```sh
-> git add <file>
-```
-Añade el fichero &lt;file&gt; al area de staging
+<kbd>$ git add (&lt;file&gt; | &lt;dir&gt; | &lt;regex&gt;)</kbd>
+Añade el fichero &lt;file&gt;, o el directorio &lt;dir&gt;, o todos los ficheros que cumplan el patron &lt;regex&gt; al area de staging
 
-```sh
-> git reset <file>
-```
-Elimina el fichero &lt;file&gt; del area de staging
+<kbd>$ git reset -- &lt;file&gt;</kbd>: elimina el fichero &lt;file&gt; del area de staging
 
 ```sh
 > git rm <file> -> elimina el fichero <file> de disco y añade la eliminación al area de staging
