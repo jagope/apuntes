@@ -47,9 +47,10 @@ Añade el fichero &lt;file&gt;, o el directorio &lt;dir&gt;, o todos los fichero
 commit realizado
 [-a] -> realiza el commit saltandose el area de staging
 
-```sh
-> git reset --soft HEAD^ -> deshace el último commit y pone los cambios en la zona de staging
-```
+<kbd>$ git reset --soft HEAD^</kbd>: deshace el &uacute;ltimo commit y pone los cambios en la zona de staging.
+
+<kbd>$ git reset --hard HEAD^</kbd>: deshace el &uacute;ltimo commit y sus cambios
+
 >git remote add <name> <url> -> añade el repositorio remoto <url> y lo almacena en la variable <name>
 
 >git remote -v -> muestra los origenes que hemos añadido a nuestro repositorio
