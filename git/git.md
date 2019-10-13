@@ -60,20 +60,20 @@ commit realizado
 >git pull <remote-name> <branch> -> baja los commits del repositorio almacenado en <remote-name> de la rama <branch>
 
 >git fetch <remote-name> -> trae toda la información disponible en el remoto <remote-name> que no tenemos todavía
+  
+<kbd>& git revert HEAD</kbd>: crea un nuevo commit con el inverso del &uacute;ltimo commit
 
 ### Comparar ficheros
 <kbd>$ git diff [&lt;file&gt;]</kbd>: muestra las diferencias desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero desde el &uacute;ltimo commit.
+
 <kbd>$ git diff --staged [&lt;file&gt;]</kbd>: muestra las diferencias de los ficheros en el area de staging desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero (si está en el area de staging( desde el &uacute;ltimo commit.
-> git diff HEAD -> muestra las diferencias con respecto a nuestro último commit
-> git diff --staged -> muestra las diferencias con el area de staging
+
+<kbd>$ git diff HEAD<Kbd>: muestra las diferencias con respecto a nuestro último commit
 > git diff --name-status master..<branch> -> muestra los ficheros que han cambiado entre la rama principal (master) y la rama <branch>
 >git checkout -- <file> ->restaura el fichero <file> a como era en el último commit
 
 ### Branchs
-```sh
-> git branch
-```
-Muestra las ramas que hay en local
+<kbd>$ git branch</kbd>: muestra las ramas que hay en local
 
 ```sh
 > git branch -r
@@ -104,6 +104,7 @@ Sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
 
 >git checkout <brach | tag> -> cambia a la rama <branch> o tag <tag>
 >git checkout -b <rama> -> crea la rama <rama> y cambia a esa rama
+>git checkout <commit> -> mueve HEAD al commit <commit>
 
 
 >git merge <rama> -> mezcla la rama actual con la rama <rama>
