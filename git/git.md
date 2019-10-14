@@ -68,27 +68,18 @@ commit realizado
 
 <kbd>$ git diff --staged [&lt;file&gt;]</kbd>: muestra las diferencias de los ficheros en el area de staging desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero (si está en el area de staging( desde el &uacute;ltimo commit.
 
-<kbd>$ git diff HEAD<Kbd>: muestra las diferencias con respecto a nuestro último commit
+<kbd>$ git diff HEAD</Kbd>: muestra las diferencias con respecto a nuestro último commit
 > git diff --name-status master..<branch> -> muestra los ficheros que han cambiado entre la rama principal (master) y la rama <branch>
 >git checkout -- <file> ->restaura el fichero <file> a como era en el último commit
 
 ### Branchs
 <kbd>$ git branch</kbd>: muestra las ramas que hay en local
 
-```sh
-> git branch -r
-```
-Muestra las ramas que hay en remoto
+<kbd>$ git branch -r</kbd>: muestra las ramas que hay en remoto
 
-```sh
-> git branch <name>
-```
-crea una rama con nombre &lt;name&gt;
+<kbd>$ git branch &lt;name&gt;</kbd>: crea una rama con nombre &lt;name&gt;
 
-```sh
-> git branch -d <name>
-```
-Elimina la rama con nombre &lt;name&gt; (solo en local)
+<kbd>$ git branch -d &lt;name&gt;</kbd>: elimina la rama con nombre &lt;name&gt; (solo en local)
 
 ```sh
 > git push origin --delete <name>
@@ -104,10 +95,13 @@ Sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
 
 >git checkout <brach | tag> -> cambia a la rama <branch> o tag <tag>
 >git checkout -b <rama> -> crea la rama <rama> y cambia a esa rama
+
+<kbd>$ git merge &lt;rama&gt;</kbd>: mezcla la rama actual con la rama &lt;rama&gt;. Si en la rama actual no se han hecho cambios desde que se creo la rama, se hace un fast forward, los commits se llevan a la rama actual, si ha habido cambios en las dos ramas se crea un nuevo commit con el resultado de mezclar los commits de ambas ramas.
+
 >git checkout <commit> -> mueve HEAD al commit <commit>
 
 
->git merge <rama> -> mezcla la rama actual con la rama <rama>
+
 >git clone <repository> -> clona el proyecto contenido en <repository> a una carpeta local
 
 ### Tags
