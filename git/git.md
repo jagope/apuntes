@@ -50,18 +50,25 @@ commit realizado
 <kbd>$ git reset --soft HEAD^</kbd>: deshace el &uacute;ltimo commit y pone los cambios en la zona de staging.
 
 <kbd>$ git reset --hard HEAD^</kbd>: deshace el &uacute;ltimo commit y sus cambios
-
->git remote add <name> <url> -> añade el repositorio remoto <url> y lo almacena en la variable <name>
-
->git remote -v -> muestra los origenes que hemos añadido a nuestro repositorio
-
->git push -u  <remote-name> <branch> -> sube los commits al repositorio almacenado en  <remote-name> a la rama <branch>
-
->git pull <remote-name> <branch> -> baja los commits del repositorio almacenado en <remote-name> de la rama <branch>
-
->git fetch <remote-name> -> trae toda la información disponible en el remoto <remote-name> que no tenemos todavía
-  
+ 
 <kbd>& git revert HEAD</kbd>: crea un nuevo commit con el inverso del &uacute;ltimo commit
+
+### Remotes
+
+<kbd>& git clone &lt;repository&gt; [&lt;folder&gt;]</kbd>: clona el proyecto contenido en &lt;repository&gt; a una carpeta con el nombre del repositorio o si se especifica el parámetro en una carpeta &lt;folder&gt;. Se crea un repositorio remoto que por defecto se llama origin
+
+<kbd>& git remote add <name> <url></kbd>: añade el repositorio remoto <url> y lo almacena en la variable <name>
+
+<kbd>& git remote -v</kbd>: muestra los origenes que hemos añadido a nuestro repositorio
+
+<kbd>& git remote show &lt;remote&gt;</kbd>: muestra la url del repositorio, y las ramas conectadas.
+
+<kbd>& git push -u  <remote-name> <branch></kbd>: sube los commits al repositorio almacenado en  <remote-name> a la rama <branch>
+
+<kbd>& git pull <remote-name> <branch></kbd>: baja los commits del repositorio almacenado en <remote-name> de la rama <branch>
+
+<kbd>& git fetch <remote-name></kbd>: trae toda la información disponible en el remoto <remote-name> que no tenemos todavía
+
 
 ### Comparar ficheros
 <kbd>$ git diff [&lt;file&gt;]</kbd>: muestra las diferencias desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero desde el &uacute;ltimo commit.
@@ -97,10 +104,6 @@ commit realizado
 <kbd>$ git merge &lt;rama&gt;</kbd>: mezcla la rama actual con la rama &lt;rama&gt;. Si en la rama actual no se han hecho cambios desde que se creo la rama, se hace un fast forward, los commits se llevan a la rama actual, si ha habido cambios en las dos ramas se crea un nuevo commit con el resultado de mezclar los commits de ambas ramas.
 
 >git checkout <commit> -> mueve HEAD al commit <commit>
-
-
-
->git clone <repository> -> clona el proyecto contenido en <repository> a una carpeta local
 
 ### Tags
 
