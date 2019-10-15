@@ -63,6 +63,8 @@ commit realizado
 
 <kbd>& git remote show &lt;remote&gt;</kbd>: muestra la url del repositorio, y las ramas conectadas.
 
+<kbd>& git remote prune &lt;remote&gt;</kbd>: limpia las ramas borradas en remoto del origen &lt;remote&gt;.
+
 <kbd>& git push -u  <remote-name> <branch></kbd>: sube los commits al repositorio almacenado en  <remote-name> a la rama <branch>
 
 <kbd>& git pull <remote-name> <branch></kbd>: baja los commits del repositorio almacenado en <remote-name> de la rama <branch>
