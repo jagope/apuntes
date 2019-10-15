@@ -69,8 +69,10 @@ commit realizado
 <kbd>$ git diff --staged [&lt;file&gt;]</kbd>: muestra las diferencias de los ficheros en el area de staging desde el &uacute;ltimo commit. Si especificamos un fichero &lt;file&gt; muestra las diferencias de dicho fichero (si está en el area de staging( desde el &uacute;ltimo commit.
 
 <kbd>$ git diff HEAD</Kbd>: muestra las diferencias con respecto a nuestro último commit
-> git diff --name-status master..<branch> -> muestra los ficheros que han cambiado entre la rama principal (master) y la rama <branch>
->git checkout -- <file> ->restaura el fichero <file> a como era en el último commit
+
+<kbd>$ git diff --name-status master..&lt;branch&gt;</Kbd>: muestra los ficheros que han cambiado entre la rama principal (master) y la rama &lt;branch&gt;
+
+<kbd>$ git checkout -- &lt;file&gt;</Kbd>: restaura el fichero &lt;file&gt; a como era en el último commit
 
 ### Branchs
 <kbd>$ git branch</kbd>: muestra las ramas que hay en local
@@ -79,17 +81,13 @@ commit realizado
 
 <kbd>$ git branch &lt;name&gt;</kbd>: crea una rama con nombre &lt;name&gt;
 
-<kbd>$ git branch -d &lt;name&gt;</kbd>: elimina la rama con nombre &lt;name&gt; (solo en local)
+<kbd>$ git branch -d &lt;name&gt;</kbd>: elimina en local la rama con nombre &lt;name&gt;
 
-```sh
-> git push origin --delete <name>
-```
-Elimina la rama con nombre &lt;name&gt;	, pero solo del remoto
+<kbd>$ git branch -D &lt;name&gt;</kbd>: elimina en local la rama con nombre &lt;name&gt;. Esta opción hay que usarla cuando la rama se subio al repositorio remoto y ha sido eliminada del repositorio remoto.
 
-```sh
-> git push origin <branch>
-```
-Sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
+<kbd>$ git push origin --delete &lt;name&gt;</kbd>: elimina en remoto la rama con nombre &lt;name&gt;
+
+<kbd>$ git push origin &lt;branch&gt;</kbd>: sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
 
 >git checkout --track origin/<branch> -> crea una rama local llamada <branch> que apunta a la rama remota origin/<branch>
 
