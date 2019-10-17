@@ -2,31 +2,21 @@
 
 ## Configurar git
 
-```sh
-> git config [--global | --system | --local] --list
-```
-Muestra todas las configuraciones del nivel especificado
+<kbd>$ git config [--global | --system | --local] --list</kbd>: muestra todas las configuraciones del nivel especificado
 
-```sh
-> git config --[system | global | local] <key> <value>
-```
-Establece el valor <value> para la clase <key> en el nivel ([system | global | local]) correspondiente. Los valores en cada uno de los niveles sobreescribe el valor del anterior nivel
+<kbd>$ > git config --[system | global | local] &t;key&gt; &lt;value&gt;</kbd>: Establece el valor &lt;value&gt; para la clase &lt;key&gt; en el nivel ([system | global | local]) correspondiente. Los valores en cada uno de los niveles sobreescribe el valor del anterior nivel
 
-```sh
-> git config --global user.name “Javier Gonzalo”
-> git config --global user.email jgonzalopelaez@gmail.com
-```
+<kbd>$ git config --global user.name “Javier Gonzalo”</kbd>
 
-```sh
-> git config --global core.autocrlf true (en windows)
-> git config --global core.autocrlf input (en linux/mac)
-```
+<kbd>$ git config --global user.email jgonzalopelaez@gmail.com</kbd>
+
+
+<kbd>$ git config --global core.autocrlf true</kbd>:  (en windows)
+<kbd>$ git config --global core.autocrlf input</kbd>:  (en linux/mac)
+
 Para no tener problema con los finales de línea, en windows cambia los finales de línea, en linux/mac no los cambia.
 
-```sh
-> git config --global alias.<alias> <comando>
-```
-Añade un alias
+<kbd>$ git config --global alias.<alias> <comando>añade un alias
 
 ## Comandos
 <kbd>$ git init</kbd>: inicializa un repositorio git en el directorio actual.
@@ -50,6 +40,8 @@ commit realizado
 <kbd>$ git reset --soft HEAD^</kbd>: deshace el &uacute;ltimo commit y pone los cambios en la zona de staging.
 
 <kbd>$ git reset --hard HEAD^</kbd>: deshace el &uacute;ltimo commit y sus cambios
+
+<kbd>$ git reset --hard &lt;SHA&gt;</kbd>: devuelve la rama al commit con el SHA &lt;SHA&gt; y descarte el resto de commits.
  
 <kbd>& git revert HEAD</kbd>: crea un nuevo commit con el inverso del &uacute;ltimo commit
 
@@ -140,7 +132,8 @@ commit realizado
 
 <kbd>$git cherry-pick [--edit] [--no-commit] &lt;hash&gt;+</kbd>: Copia uno o varios commit de otra rama con el hash &lt;hash&gt;, esto genera un nuevo commit con un hash diferente. Con la opción --edit podemos especificar la descripción del nuevo commit. Con la opción --no-commit copia los cambios pero no hace commit.
 
-<kbd>$ git filter-branch --tree-filter &lt;command&gt; -- [--all, HEAD]</kbd>: recorre cada uno de los commits, ejecuta sobre él el comando &lt;command&gt; y vuelve a hacer commit. Puede ejecutarde sobre la rama actual, HEAD, o sobre todas las remas, --all.
+<kbd>$ git filter-branch --index-filter &lt;command&gt; -- [--all, HEAD]</kbd>: recorre cada uno de los commits, ejecuta sobre él el comando &lt;command&gt; y vuelve a hacer commit. Puede ejecutarde sobre la rama actual, HEAD, o sobre todas las remas, --all.
 Ejemplos:
-git filter-branch --tree-filter 'rm -f password.txt' -- --all, elimina de todas las ramas el fichero password.txt
-git filter-branch --tree-filter 'find . -name "*.mp4" -exec rm {} \;' -- --all, elimina de todas las ramas los videos
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch password.txt' -- --all, elimina de todas las ramas el fichero password.txt
+
+<kbd>$ git reflog</kbd>: nos muestra todos los commits, incluso los borrados, por lo que lo podemos utilizar para recuperar commits. Reflog existe solamente en el repositorio local.
