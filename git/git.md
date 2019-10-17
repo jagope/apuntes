@@ -109,42 +109,17 @@ commit realizado
 
 ### Tags
 
-```sh
-> git tag
-```
-Muestra todos los tags creados
+<kbd>$ git tag</kbd>: muestra todos los tags creados.
 
-```sh
-> git tag <tag> [-m <description>]
-```
-Crea en local una etiqueta con nombre &lt;tag&gt;, opcionalmente se le puede establecer una descripción
+<kbd>$ git tag &lt;tag&gt; [-m <description>]</kbd>: crea en local una etiqueta con nombre &lt;tag&gt;, opcionalmente se le puede establecer una descripción.
 
-```sh
-> git push --tags
-```
-Envia los tags al remoto
+<kbd>$ git push --tags</kbd>: env&iacute;a los tags al remoto
 
-```sh
-> git tag d <tag>
-```
-Elimina de local la etiqueta &lt;tag&gt;
+<kbd>$ git tag -d &lt;tag&gt;</kbd>: elimina de local la etiqueta &lt;tag&gt;
 
-```sh
-> git push origin :refs/tags/<tag>
-```
-Elimina de remoto la etiqueta &lt;tag&gt;
+<kbd>$ git push origin :refs/tags/&lt;tag&gt;</kbd>: elimina de remoto la etiqueta &lt;tag&gt;
 
-#### Otros
-
->git blame <file> -> nos dice quien ha escrito cada línea del fichero <file>
->git fetch -> sincroniza nuestro repositorio local con el remoto, pero no actualiza nada de nuestro código
-
->git log [--stat] [-n] -> muestra todos los mensajes de commit
-[--stat] -> muestra los ficheros incluidos en cada commit
-[-n] -> número de commits a mostrar
-
->git cherry-pick [--edit] [--no-commit] <hash> -> copia un commit de otra rama con el hash <hash>
-Stash
+#### Stash
 > git stash
 
 guarda los cambios de la rama actual en un sitio temporal
@@ -159,3 +134,19 @@ devuelve los cambios del sitio temporal a la rama de la posición n de la pila
 
 > git stash pop [stash@{n}]
 devuelve los cambios de la pila de stash a la rama actual y lo elimina de la pila, si no se especifica la posición de la pila se asume stash@{0}
+
+#### Otros
+
+>git blame <file> -> nos dice quien ha escrito cada línea del fichero <file>
+>git fetch -> sincroniza nuestro repositorio local con el remoto, pero no actualiza nada de nuestro código
+
+>git log [--stat] [-n] -> muestra todos los mensajes de commit
+[--stat] -> muestra los ficheros incluidos en cada commit
+[-n] -> número de commits a mostrar
+
+>git cherry-pick [--edit] [--no-commit] <hash> -> copia un commit de otra rama con el hash <hash>
+
+<kbd>$ git filter-branch --tree-filter &lt;command&gt; -- [--all, HEAD]</kbd>: recorre cada uno de los commits, ejecuta sobre él el comando &lt;command&gt; y vuelve a hacer commit. Puede ejecutarde sobre la rama actual, HEAD, o sobre todas las remas, --all.
+Ejemplos:
+git filter-branch --tree-filter 'rm password.txt' -- --all, elimina de todas las ramas el fichero password.txt
+git filter-branch --tree-filter 'find . -name "*.mp4" -exec rm {} \;' -- --all, elimina de todas las ramas los videos
