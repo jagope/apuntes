@@ -130,14 +130,15 @@ commit realizado
 
 #### Otros
 
->git blame <file> -> nos dice quien ha escrito cada línea del fichero <file>
->git fetch -> sincroniza nuestro repositorio local con el remoto, pero no actualiza nada de nuestro código
+<kbd>$git blame &lt;file&gt;</kbd>: nos dice quien ha escrito cada línea del fichero &lt;file&gt;.
 
->git log [--stat] [-n] -> muestra todos los mensajes de commit
+<kbd>$git fetch</kbd>: sincroniza nuestro repositorio local con el remoto, pero no actualiza nada de nuestro código
+
+<kbd>$git log [--stat] [-n]</kbd>: muestra todos los mensajes de commit
 [--stat] -> muestra los ficheros incluidos en cada commit
 [-n] -> número de commits a mostrar
 
->git cherry-pick [--edit] [--no-commit] <hash> -> copia un commit de otra rama con el hash <hash>
+<kbd>$git cherry-pick [--edit] [--no-commit] &lt;hash&gt;+</kbd>: Copia uno o varios commit de otra rama con el hash &lt;hash&gt;, esto genera un nuevo commit con un hash diferente. Con la opción --edit podemos especificar la descripción del nuevo commit. Con la opción --no-commit copia los cambios pero no hace commit.
 
 <kbd>$ git filter-branch --tree-filter &lt;command&gt; -- [--all, HEAD]</kbd>: recorre cada uno de los commits, ejecuta sobre él el comando &lt;command&gt; y vuelve a hacer commit. Puede ejecutarde sobre la rama actual, HEAD, o sobre todas las remas, --all.
 Ejemplos:
