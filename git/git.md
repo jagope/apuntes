@@ -120,20 +120,13 @@ commit realizado
 <kbd>$ git push origin :refs/tags/&lt;tag&gt;</kbd>: elimina de remoto la etiqueta &lt;tag&gt;
 
 #### Stash
-> git stash
+<kbd>$ git stash</kbd>: guarda los cambios de la rama actual en un sitio temporal
 
-guarda los cambios de la rama actual en un sitio temporal
+<kbd>$ git stash list</kbd>: muestra la pila de cambios guardados
 
-> git stash list
+<kbd>$ git stash apply stash@{n}</kbd>: devuelve los cambios del sitio temporal a la rama de la posición n de la pila
 
-muestra la pila de cambios guardados
-
-> git stash apply stash@{n}
-
-devuelve los cambios del sitio temporal a la rama de la posición n de la pila
-
-> git stash pop [stash@{n}]
-devuelve los cambios de la pila de stash a la rama actual y lo elimina de la pila, si no se especifica la posición de la pila se asume stash@{0}
+<kbd>$ git stash pop [stash@{n}]</kbd>: devuelve los cambios de la pila de stash a la rama actual y lo elimina de la pila, si no se especifica la posición de la pila se asume stash@{0}
 
 #### Otros
 
@@ -148,5 +141,5 @@ devuelve los cambios de la pila de stash a la rama actual y lo elimina de la pil
 
 <kbd>$ git filter-branch --tree-filter &lt;command&gt; -- [--all, HEAD]</kbd>: recorre cada uno de los commits, ejecuta sobre él el comando &lt;command&gt; y vuelve a hacer commit. Puede ejecutarde sobre la rama actual, HEAD, o sobre todas las remas, --all.
 Ejemplos:
-git filter-branch --tree-filter 'rm password.txt' -- --all, elimina de todas las ramas el fichero password.txt
+git filter-branch --tree-filter 'rm -f password.txt' -- --all, elimina de todas las ramas el fichero password.txt
 git filter-branch --tree-filter 'find . -name "*.mp4" -exec rm {} \;' -- --all, elimina de todas las ramas los videos
