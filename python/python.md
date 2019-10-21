@@ -34,7 +34,22 @@ else:
   <expresion>
 ```
 
-### Listas
+#### For
+
+```python
+for i in [1, 3, 4]:
+  print(i)    
+```
+
+## Data types
+
+### int
+
+### str
+
+### float
+
+### list
 
 #### Definición
 
@@ -68,6 +83,11 @@ del spam[4]
 [1, 3, 4] + [5, 7, 9]
 ```
 
+### Diccionarios
+```python
+{"key": value }
+```
+
 #### Operadores in y not in
 
 ```python
@@ -77,14 +97,6 @@ del spam[4]
 ```python
  4 not in [1, 3, 4]
 ```
-
-### For
-
-```python
-for i in [1, 3, 4]:
-  print(i)    
-```
-
 ### Control de excepciones
 
 ```python
