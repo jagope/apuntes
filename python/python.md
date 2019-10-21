@@ -83,6 +83,18 @@ del spam[4]
 [1, 3, 4] + [5, 7, 9]
 ```
 
+#### Añadir elementos
+```python
+list.append(item)
+```
+
+
+### Tuples
+```python
+(4, 5, 6)
+```
+Es igual que list, pero con la direfencia de que es inmutable
+
 ### Diccionarios
 ```python
 {"key": value }
