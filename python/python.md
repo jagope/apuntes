@@ -66,6 +66,14 @@ spam[1]
 spam[1:4]
 ```
 
+se puede omitir cualquiera de los dos lados del rango
+```python
+spam[:4] # devuelve del primero al tercero
+
+spam[2:] # devuelve del tercero al &uacute;ltimo
+```
+
+
 se puede acceder desde el principio o desde el final
 ```python
 spam[1]
