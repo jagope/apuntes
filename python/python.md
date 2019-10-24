@@ -49,6 +49,13 @@ La funci&oacute;n <kdb>type</kdb> nos devuelve el tipo de una variable
 
 ### str
 
+#### formateo de strings
+```python
+"hello %s %s" % (name, surname)
+
+f"hello {name} {surname}" # since python 3.6
+```
+
 ### float
 
 ### list
