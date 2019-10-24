@@ -43,6 +43,8 @@ for i in [1, 3, 4]:
 
 ## Data types
 
+La funci&oacute;n <kdb>type</kdb> nos devuelve el tipo de una variable
+
 ### int
 
 ### str
@@ -95,19 +97,6 @@ del spam[4]
 ```python
 list.append(item)
 ```
-
-
-### Tuples
-```python
-(4, 5, 6)
-```
-Es igual que list, pero con la direfencia de que es inmutable
-
-### Diccionarios
-```python
-{"key": value }
-```
-
 #### Operadores in y not in
 
 ```python
@@ -117,6 +106,18 @@ Es igual que list, pero con la direfencia de que es inmutable
 ```python
  4 not in [1, 3, 4]
 ```
+
+### Tuples
+```python
+(4, 5, 6)
+```
+Es igual que list, pero con la direfencia de que es inmutable
+
+### dict
+```python
+{"key": value }
+```
+
 ### Control de excepciones
 
 ```python
