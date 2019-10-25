@@ -13,7 +13,7 @@ def <nombre_funcion>():
   ...
 ```
 
-#### keywords parameters
+#### keyword parameters
 ```python
 def <nombre_funcion>(a, b):
   ...
@@ -33,6 +33,14 @@ Los par&aacute;metros por defecto se deben definir siempre al final
 def <nombre_funcion>(*args):
   ...
 ```
+Los par&aacute;metros se reciben como una lista
+
+#### keyword var args
+```python
+def <nombre_funcion>(**kargs):
+  ...
+```
+Los par&aacute;metros se reciben como un diccionario
 
 #### Funciones predefinidas
 
