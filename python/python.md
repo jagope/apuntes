@@ -26,7 +26,13 @@ def <nombre_funcion>(a, b):
 def <nombre_funcion>(a, b = 5):
   ...
 ```
-Los para&acute;metros por defecto se deben definir siempre al final
+Los par&aacute;metros por defecto se deben definir siempre al final
+
+#### var args
+```python
+def <nombre_funcion>(*args):
+  ...
+```
 
 #### Funciones predefinidas
 
