@@ -9,17 +9,30 @@ Los comentarios empiezan con #
 #### Definición
 
 ```python
-def <nombre_funcion():
+def <nombre_funcion>():
   ...
 ```
 
-#### Funciones predefinidas
+#### keywords parameters
+```python
+def <nombre_funcion>(a, b):
+  ...
 
+<nombre_funcion(a = 4, b = 5)
+```
+
+#### default parameters
+```python
+def <nombre_funcion>(a, b = 5):
+  ...
+```
+Los para&acute;metros por defecto se deben definir siempre al final
+
+#### Funciones predefinidas
 
 ```print('<cadena>')```: escribe <cadena> en la consola
 
 ```input()```: lee la entrada de la consola
-
 
 ### Instrucciones de control
 
