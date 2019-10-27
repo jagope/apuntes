@@ -1,19 +1,19 @@
 # Python
 
-### Comentarios
+## Comentarios
 
 Los comentarios empiezan con #
 
-### Funciones
+## Funciones
 
-#### Definición
+### Definición
 
 ```python
 def <nombre_funcion>():
   ...
 ```
 
-#### keyword parameters
+### keyword parameters
 ```python
 def <nombre_funcion>(a, b):
   ...
@@ -21,36 +21,36 @@ def <nombre_funcion>(a, b):
 <nombre_funcion(a = 4, b = 5)
 ```
 
-#### default parameters
+### default parameters
 ```python
 def <nombre_funcion>(a, b = 5):
   ...
 ```
 Los par&aacute;metros por defecto se deben definir siempre al final
 
-#### var args
+### var args
 ```python
 def <nombre_funcion>(*args):
   ...
 ```
 Los par&aacute;metros se reciben como una lista
 
-#### keyword var args
+### keyword var args
 ```python
 def <nombre_funcion>(**kargs):
   ...
 ```
 Los par&aacute;metros se reciben como un diccionario
 
-#### Funciones predefinidas
+### Funciones predefinidas
 
 ```print('<cadena>')```: escribe <cadena> en la consola
 
 ```input()```: lee la entrada de la consola
 
-### Instrucciones de control
+## Instrucciones de control
 
-#### if
+### if
 
 ```python
 if <expresion>:
@@ -61,7 +61,7 @@ else:
   <expresion>
 ```
 
-#### For
+### For
 
 ```python
 for i in [1, 3, 4]:
@@ -152,7 +152,7 @@ Es igual que list, pero con la direfencia de que es inmutable
 {"key": value }
 ```
 
-### Control de excepciones
+## Control de excepciones
 
 ```python
 try:
@@ -161,13 +161,15 @@ except <exception>:
   ...
 ```
 
-#### Lanzar una excepci&oacute;n
+### Lanzar una excepci&oacute;n
 
 ```python
 raise exception(<description>)
 ```
 
-### Módulos
+## Modules
+
+### Modules built-in
 
 ```python
 import <modulo>
@@ -181,9 +183,21 @@ Nos permite manipular la estructura de directorios, leer y escribir archivos.
 
 Nos permite trabajar de forma directa con órdenes del sistema operativo.
 
-### Files
+#### csv
+Para leer y escribir ficheros csv
 
-#### with
+### Third party modules
+
+```sh
+$ pip install <module>
+```
+
+#### Pandas
+Para leer y escribir ficheros csv
+
+## Files
+
+### with
 ```python
 with open(<path>) as myFile:
   ...
