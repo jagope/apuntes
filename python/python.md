@@ -180,3 +180,12 @@ Nos permite manipular la estructura de directorios, leer y escribir archivos.
 #### subprocess
 
 Nos permite trabajar de forma directa con órdenes del sistema operativo.
+
+### Files
+
+#### with
+```python
+with open(<path>) as myFile:
+  ...
+```
+Con la clausula with se cierra automáticamente el fichero.
