@@ -186,6 +186,15 @@ Nos permite trabajar de forma directa con órdenes del sistema operativo.
 #### csv
 Para leer y escribir ficheros csv
 
+#### json
+Permite leer ficheron json
+
+```python
+import json
+
+data = json.load(open(<path>))
+```
+
 ### Third party modules
 
 ```sh
