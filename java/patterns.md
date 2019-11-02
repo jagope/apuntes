@@ -1,4 +1,4 @@
-# Table of Contents
+# Table of Contents <a id="menu"></a>
 1. [Creational Patterns](#creational)
 	1. [The Prototype Pattern](#prototype)
 	2. [The Singleton pattern](#singleton)
@@ -28,7 +28,8 @@
 	15. Template Method
 	
 
-# Creational Patterns <a id="creational"></a>
+# Creational Patterns <a id="creational"></a>![Menu](https://github.com/jagope/apuntes/blob/master/java/patterns_images/menu.png)
+
 Creational patterns deal with the creation of objects.
 
 ## The Prototype Pattern <a id="prototype"></a>
