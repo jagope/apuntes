@@ -10,12 +10,12 @@
 	2. [The Decorator Pattern](#decorator)
 	3. [The Facade Pattern](#facade)
 	4. [The Adapter pattern](#adapter)
-	3. Bridge
+	5. Bridge
 	6. Composite
 	7. Flyweight
 3. [Behavioral Patterns](#behavioral)
-	1.[Dependency injection](#dependecy)
-	2.[Visitor](#visitor)
+	1. [Dependency injection](#dependecy)
+	2. [Visitor](#visitor)
 	4. Chain of responsibility
 	5. Command
 	8. Interpreter
