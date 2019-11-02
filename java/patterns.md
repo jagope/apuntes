@@ -1,12 +1,13 @@
 # Table of Contents
 1. [Creational Patterns](#creational)
+	1. [The Prototype Pattern](#prototype)
 2. [Structural Patterns](#structural)
 
 
-# Creational Patterns <a name="creational"></a>
+# Creational Patterns <a id="creational"></a>
 Creational patterns deal with the creation of objects.
 
-## The Prototype Pattern
+## The Prototype Pattern <a id="prototype"></a>
 A Prototype represents a fully initialized instance, to be copied or cloned.
 
 ## The Singleton pattern
