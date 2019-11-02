@@ -28,12 +28,14 @@
 	15. Template Method
 	
 
-# Creational Patterns <a id="creational"></a> [Table of Contents](#menu)
+# Creational Patterns <a id="creational"></a>
 
 Creational patterns deal with the creation of objects.
 
 ## The Prototype Pattern <a id="prototype"></a>
 A Prototype represents a fully initialized instance, to be copied or cloned.
+
+[Table of Contents](#menu)
 
 ## The Singleton pattern <a id="singleton"></a>
 
@@ -85,6 +87,8 @@ public enum <enum_name> {
 }
 ```
 
+[Table of Contents](#menu)
+
 ## The Builder Pattern <a id="builder"></a>
 
 The Builder Pattern separates object construction from its representation.
@@ -123,9 +127,13 @@ public class Coffee {
 }
 ```
 
+[Table of Contents](#menu)
+
 ## The Factory Pattern <a id="factory"></a>
 
 The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
+
+[Table of Contents](#menu)
 
 # Structural Patterns <a id="structural"></a>
 Structural patterns deal with the composition of objects.
@@ -133,11 +141,17 @@ Structural patterns deal with the composition of objects.
 ## The Proxy Pattern
 A Proxy is an object that represents another object.
 
+[Table of Contents](#menu)
+
 ## The Decorator Pattern
 The Decorator pattern allows us to add responsibilities to objects, dynamically.
 
+[Table of Contents](#menu)
+
 ## The Facade Pattern
 A Facade is a single class that represents an entire subsystem.
+
+[Table of Contents](#menu)
 
 ## Adapter pattern
 
@@ -149,12 +163,14 @@ Example:
 
 ![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/adapter.jpg)
 
+[Table of Contents](#menu)
+
 # Behavioral Patterns <a id="behavioral"></a>
 Behavioral patterns focus more on the behavior of objects, or more precisely, interactions between objects.
 
 ## Dependency injection
 
-
+[Table of Contents](#menu)
 
 ## Visitor
 
@@ -183,3 +199,5 @@ interface Visitor {
    public void visit(Cd cd);
 }
 ```
+
+[Table of Contents](#menu)
