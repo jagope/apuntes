@@ -1,6 +1,7 @@
 # Table of Contents
 1. [Creational Patterns](#creational)
 	1. [The Prototype Pattern](#prototype)
+	2. [The Singleton pattern](#singleton)
 2. [Structural Patterns](#structural)
 
 
@@ -10,7 +11,7 @@ Creational patterns deal with the creation of objects.
 ## The Prototype Pattern <a id="prototype"></a>
 A Prototype represents a fully initialized instance, to be copied or cloned.
 
-## The Singleton pattern
+## The Singleton pattern <a id="singleton"></a>
 
 The main idea of it is to ensure that only one single instance of the class could be created at any given time.
 
