@@ -2,8 +2,16 @@
 1. [Creational Patterns](#creational)
 	1. [The Prototype Pattern](#prototype)
 	2. [The Singleton pattern](#singleton)
+	3. [The Builder Pattern](#builder)
+	4. [The Factory Pattern](#factory)
 2. [Structural Patterns](#structural)
-
+	1. [The Proxy Pattern](#proxy)
+	2. [The Decorator Pattern](#decorator)
+	3. [The Facade Pattern](#facade)
+	4. [Adapter pattern](#adapter)
+3. [Behavioral Patterns](#behavioral)
+	1.[Dependency injection](#dependecy)
+	2.[Visitor](#visitor)
 
 # Creational Patterns <a id="creational"></a>
 Creational patterns deal with the creation of objects.
@@ -61,7 +69,7 @@ public enum <enum_name> {
 }
 ```
 
-## The Builder Pattern
+## The Builder Pattern <a id="builder"></a>
 
 The Builder Pattern separates object construction from its representation.
 
@@ -99,7 +107,7 @@ public class Coffee {
 }
 ```
 
-## The Factory Pattern
+## The Factory Pattern <a id="factory"></a>
 
 The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
 
@@ -125,7 +133,7 @@ Example:
 
 ![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/adapter.jpg)
 
-# Behavioral Patterns
+# Behavioral Patterns <a id="behavioral"></a>
 Behavioral patterns focus more on the behavior of objects, or more precisely, interactions between objects.
 
 ## Dependency injection
