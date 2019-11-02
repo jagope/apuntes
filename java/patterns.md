@@ -28,7 +28,7 @@
 	15. Template Method
 	
 
-# Creational Patterns <a id="creational"></a>![Menu](https://github.com/jagope/apuntes/blob/master/java/patterns_images/menu.png)
+# Creational Patterns <a id="creational"></a>![[Menu](https://github.com/jagope/apuntes/blob/master/java/patterns_images/menu.png)](#menu)
 
 Creational patterns deal with the creation of objects.
 
