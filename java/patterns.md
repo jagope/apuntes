@@ -1,6 +1,6 @@
 # Table of Contents
 1. [Creational Patterns](#creational)
-2. [Structural Patterns](#Structural Patterns)
+2. [Structural Patterns](#structural)
 
 
 # Creational Patterns <a name="creational"></a>
@@ -101,7 +101,7 @@ public class Coffee {
 
 The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
 
-# Structural Patterns
+# Structural Patterns <a id="structural"></a>
 Structural patterns deal with the composition of objects.
 
 ## The Proxy Pattern
