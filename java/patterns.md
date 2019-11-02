@@ -1,10 +1,10 @@
 # Table of Contents <a id="menu"></a>
 1. [Creational Patterns](#creational)
-	1. [The Prototype Pattern](#prototype)
-	2. [The Singleton pattern](#singleton)
-	3. [The Builder Pattern](#builder)
-	4. [The Factory Pattern](#factory)
-	5. Abstract Factory
+	* [The Prototype Pattern](#prototype)
+	* [The Singleton pattern](#singleton)
+	* [The Builder Pattern](#builder)
+	* [The Factory Pattern](#factory)
+	* Abstract Factory
 2. [Structural Patterns](#structural)
 	1. [The Proxy Pattern](#proxy)
 	2. [The Decorator Pattern](#decorator)
