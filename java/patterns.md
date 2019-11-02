@@ -1,9 +1,9 @@
 # Table of Contents
-1. [Creational Patterns](#Creational Patterns)
-2. [Structural Patterns](# Structural Patterns)
+1. [Creational Patterns](#creational)
+2. [Structural Patterns](#Structural Patterns)
 
 
-# Creational Patterns
+# Creational Patterns <a name="creational"></a>
 Creational patterns deal with the creation of objects.
 
 ## The Prototype Pattern
