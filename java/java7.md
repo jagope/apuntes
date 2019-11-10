@@ -2,12 +2,12 @@
 
 ## Clase Objects
 
-La clase Objects nos ofrece los mÃ©todos:
+La clase Objects nos ofrece los m&eacute;todos:
 * <code>static boolean equals(Object a, Object b)</code>
 * <code>static int hash(Object... values)</code>
 * <code>static int hashCode(Object o)</code>
 
-que nos ayudaran a simplificar los mÃ©todos equals y hashCode
+que nos ayudaran a simplificar los m&eacute;todos equals y hashCode
 
 ```java
 @Override
