@@ -19,3 +19,14 @@ Class <name>:
 def __init__():
   ...
 ```
+
+## Herencia
+
+```python
+
+Class <name>(<parent>)
+
+  def __init__(self):
+    <parent>.__init(self)
+    ...
+```
