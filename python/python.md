@@ -85,6 +85,8 @@ f"hello {name} {surname}" # since python 3.6
 
 ### float
 
+### boolean
+
 ### list
 
 #### Definición
@@ -141,6 +143,16 @@ list.append(item)
  4 not in [1, 3, 4]
 ```
 
+
+### set
+Un set es como un list, pero sin permitir duplicados.
+
+#### definición
+
+```python
+{'value1', 'value2',...}
+```
+
 ### Tuples
 ```python
 (4, 5, 6)
@@ -151,6 +163,13 @@ Es igual que list, pero con la direfencia de que es inmutable
 ```python
 {"key": value }
 ```
+
+
+### frozenset
+
+### ranges
+
+### None
 
 ## Control de excepciones
 
