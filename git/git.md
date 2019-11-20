@@ -28,11 +28,10 @@ Añade el fichero &lt;file&gt;, o el directorio &lt;dir&gt;, o todos los fichero
 
 <kbd>$ git reset -- &lt;file&gt;</kbd>: elimina el fichero &lt;file&gt; del area de staging
 
-```sh
-> git rm <file> -> elimina el fichero <file> de disco y añade la eliminación al area de staging
-```
+<kbd>$ git rm <file> -> elimina el fichero <file> de disco y añade la eliminación al area de staging</kbd>
 
->git commit [--amend] [-a] -m "descripcion del cambio" -> realiza el commit de todo lo que haya en el area de staging.
+<kbd>$git commit [--amend] [-a] -m "descripcion del cambio" </kbd> realiza el commit de todo lo que haya en el area de staging.
+
 [--amend] -> añade los cambios al último
 commit realizado
 [-a] -> realiza el commit saltandose el area de staging
@@ -86,7 +85,7 @@ commit realizado
 
 <kbd>$ git branch -D &lt;name&gt;</kbd>: elimina en local la rama con nombre &lt;name&gt;. Esta opción hay que usarla cuando la rama se subio al repositorio remoto y ha sido eliminada del repositorio remoto.
 
-<kbd>$ git push origin --delete &lt;name&gt;</kbd>: elimina en remoto la rama con nombre &lt;name&gt;
+<kbd>$ git push [--delete | -d] &lt;remote&gt; &lt;name&gt;</kbd>: elimina del remoto &lt;remote&gt; la rama con nombre &lt;name&gt;
 
 <kbd>$ git push origin &lt;branch&gt;</kbd>: sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
 
