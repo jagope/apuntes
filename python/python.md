@@ -145,12 +145,27 @@ list.append(item)
 
 
 ### set
+
 Un set es como un list, pero sin permitir duplicados.
 
 #### definición
 
 ```python
 {'value1', 'value2',...}
+```
+
+```python
+set(['value1', 'value2',...])
+```
+
+### frozenset
+
+Es un set inmutable.
+
+#### definición
+
+```python
+frozenset(['value1', 'value2',...])
 ```
 
 ### Tuples
@@ -165,7 +180,7 @@ Es igual que list, pero con la direfencia de que es inmutable
 ```
 
 
-### frozenset
+
 
 ### ranges
 
