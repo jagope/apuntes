@@ -56,7 +56,7 @@ commit realizado
 
 <kbd>& git remote prune &lt;remote&gt;</kbd>: limpia las ramas borradas en remoto del origen &lt;remote&gt;.
 
-<kbd>& git push -u  <remote-name> <branch></kbd>: sube los commits al repositorio almacenado en  <remote-name> a la rama <branch>
+<kbd>& git push &lt;remoteName&gt; &lt;localBranchName&gt;[:&lt;remoteBranchName&gt;]</kbd>: sube los commits al repositorio con nombre &lt;remote-name&gt; de la rama llamada &lt;localBranchName&gt;. Opcionalmente podemos establecer el nombre &lt;remoteBranchName&gt; de la rama con el que se creara en remoto, sino se creará con &lt;localBranchName&gt;. 
 
 <kbd>& git pull <remote-name> <branch></kbd>: baja los commits del repositorio almacenado en <remote-name> de la rama <branch>
 
