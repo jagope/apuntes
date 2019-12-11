@@ -89,14 +89,15 @@ commit realizado
 
 <kbd>$ git push origin &lt;branch&gt;</kbd>: sube los cambios de la rama local &lt;branch&gt; a la rama remota &lt;branch&gt;
 
-<kbd>$ git checkout --track origin/<branch> -> crea una rama local llamada <branch> que apunta a la rama remota origin/<branch>
+<kbd>$ git checkout --track origin/&lt;branch&gt; -> crea una rama local llamada &lt;branch&gt; que apunta a la rama remota origin/<branch&gt;
 
-<kbd>$ git checkout <brach | tag></kbd>: cambia a la rama <branch> o tag <tag>
-<kbd>$ git checkout -b <rama></kbd>: crea la rama <rama> y cambia a esa rama
+<kbd>$ git checkout &lt;branch | tag&gt;</kbd>: cambia a la rama &lt;branch&gt; o tag &lt;tag&gt;
+<kbd>$ git checkout -b &lt;rama&gt;</kbd>: crea la rama &lt;rama&gt; y cambia a esa rama
+<kbd>$ git checkout -b &lt;rama&gt; &lt;remote&gt;/&lt;rama&gt;</kbd>: descarga la rama &lt;remote&gt;/&lt;rama&gt; en la rama local &lt;rama&gt; y cambia a esa rama
 
 <kbd>$ git merge &lt;rama&gt;</kbd>: mezcla la rama actual con la rama &lt;rama&gt;. Si en la rama actual no se han hecho cambios desde que se creo la rama, se hace un fast forward, los commits se llevan a la rama actual, si ha habido cambios en las dos ramas se crea un nuevo commit con el resultado de mezclar los commits de ambas ramas.
 
-<kbd>$ git checkout <commit></kbd>: mueve HEAD al commit <commit>
+<kbd>$ git checkout &lt;commit&gt;</kbd>: mueve HEAD al commit &lt;commit&gt;
 
 ### Tags
 
