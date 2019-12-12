@@ -46,6 +46,29 @@ Accedemos a la uri con la clase ```TestRestTemplate```, ej:
 
 ```
 
+## The @TestPropertySource Annotation
+If we need more granular control over test properties, then we can make use of the @TestPropertySource annotation.
+
+This allows us to set test properties for a specific test context, taking precedence over the default property sources:
+
+```java
+@ContextConfiguration
+@TestPropertySource("/my-test.properties")
+public class IntegrationTests {
+    // tests
+}
+```
+
+If we don't want to use a file, we can specify names and values directly:
+
+```java
+@ContextConfiguration
+@TestPropertySource("foo=bar", "bar=foo")
+public class IntegrationTests {
+    // tests
+}
+```
+
 # Security
 
 ## starter
