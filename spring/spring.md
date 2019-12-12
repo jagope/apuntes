@@ -162,29 +162,60 @@ public EmbeddedDatabase dataSource() {
 
 ## 2. PropertyPlaceHolderConfigurer
 
-Esta clase nos permite extraer parametrizaciones del fichero de configuración de Spring y ubicarlas en ficheros de propiedades. 
-Podremos acceder al valor de la variable de la siguiente manera:  ${variable}.
+Esta clase nos permite extraer los valores de ficheros .properties y usarlas en cualquier lugar de la aplicación. Se puede añadir más de un fichero, en caso de que la propiedad esté en más de un fichero se queda con el valor de la última aparición.
 
+#### Configuración mediante xml (1)
 ```xml
 <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="location">
         <value>servicio.properties</value>
+	<value>servicio_#{entorno}.properties</value>
     </property>
 </bean>
- 
+```
+
+Si se define más de un PropertyPlaceholderConfigurer dentro del mismo contexto, spring intentará recuperar la variable del PropertyPlaceholderConfigurer
+que haya cargado primero (se puede configurar el orden), si no encuentra esta variable en el fichero properties lanzará un error. Para evitar que lance el error y hay que añadir la siguiente propiedad 
+en todos los PropertyPlaceHolderConfigurer:
+```
+<property name="ignoreUnresolvablePlaceholders" value="true" />
+```
+Con esta propiedad, si no encuentra la variable en el primer PropertyPlaceholderConfigurer, pasará a buscarla en el siguiente.
+
+#### Configuración mediante xml (1)
+```xml
+<context:property-placeholder location="classpath:foo.properties(, <path>)*" />
+```
+
+#### Configuración mediante clase
+```java
+@Configuration
+@PropertySource("classpath:servicio.properties")
+@PropertySource("classpath:servicio_${entorno}.properties")
+public class PropertiesWithJavaConfig {
+    //...
+}
+```
+
+#### Injectar una propiedad
+```xml
 <bean id="servicioPropiedades" class="com.arquitecturajava.properties.Servicio">
     <property name="url" value="${url}"></property>
     <property name="puerto" value="${puerto}"></property>
 </bean>
 ```
 
-Si se define más de un PropertyPlaceholderConfigurer dentro del mismo contexto, spring intentará recuperar la variable del PropertyPlaceholderConfigurer
-que haya cargado primero, si no encuentra esta variable en el fichero properties lanzará un error. Para evitar que lance el error y hay que añadir la siguiente propiedad 
-en todos los PropertyPlaceHolderConfigurer:
+```java
+@Component
+public <class> {
+
+	@Value("{<name_variable}")
+	private int <atribute>;
+	
+	...
+}
 ```
-<property name="ignoreUnresolvablePlaceholders" value="true" />
-```
-Con esta propiedad, si no encuentra la variable en el primer PropertyPlaceholderConfigurer, pasará a buscarla en el siguiente.
+
 
 ## 3. Exception Handling
 
