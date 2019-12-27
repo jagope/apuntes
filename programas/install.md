@@ -20,7 +20,7 @@ shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],
 }
 ```
 4. Change the env key in the config to the following:
-```
+```sh
 config: {
 ...
 env: {TERM: 'cygwin'},
@@ -28,3 +28,8 @@ env: {TERM: 'cygwin'},
 }
 ```
 5. Save the file and close Notepad.
+
+## selected text will automatically be copied to the clipboard
+```sh
+    copyOnSelect: true,
+```
