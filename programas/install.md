@@ -54,5 +54,5 @@ export PS1
 set cascadia font
 ```xml
     // font family with optional fallbacks
-    fontFamily: 'Cascadia, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Cascadia Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 ```
