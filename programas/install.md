@@ -48,3 +48,11 @@ env: {TERM: 'cygwin'},
 PS1='\[\033[33m\]pwd: \w\[\033[36m\] branch: `__git_ps1`\[\033[0m\]\n> '
 export PS1
 ```
+
+## change the font
+
+set cascadia font
+```xml
+    // font family with optional fallbacks
+    fontFamily: 'Cascadia, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+```
