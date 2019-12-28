@@ -56,3 +56,15 @@ set cascadia font
     // font family with optional fallbacks
     fontFamily: '"Cascadia Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 ```
+
+## plugins
+
+hyper-opacity
+
+```xml
+config: {
+...
+  opacity: 0.7
+...
+}
+```
