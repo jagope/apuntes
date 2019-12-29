@@ -45,7 +45,7 @@ env: {TERM: 'cygwin'},
 #!/bin/bash
 
 # PROMPT
-PS1='\[\033[33m\]pwd: \w\[\033[36m\] branch: `__git_ps1`\[\033[0m\]\n> '
+PS1='\[\e[42m\]\w \[\e[44m\]`__git_ps1`\[\033[0m\]\n> '
 export PS1
 ```
 
