@@ -75,3 +75,9 @@ assertAll(
   ...
 );
 ```
+
+### assert exceptions
+
+```java
+assertThrows(<Exception>.class, () -> { <method>(); });
+```
