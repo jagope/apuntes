@@ -79,5 +79,12 @@ assertAll(
 ### assert exceptions
 
 ```java
-assertThrows(<Exception>.class, () -> { <method>(); });
+assertThrows(<Exception>.class, <Executable>);
+```
+
+### assert timeout
+```java
+assertTimeout(<Duration>, <Executable>);
+
+assertTimeoutPreemptively(<Duration>, <Executable>);
 ```
