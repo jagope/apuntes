@@ -43,3 +43,15 @@ public class ClassTest {
   ...
 }
 ```
+
+## Assertions
+
+### grouped assertions
+
+```java
+assertAll(
+  () -> assertEquals(<expected>, <realValue>),
+  () -> assertEquals(<expected>, <realValue>),
+  ...
+);
+```
