@@ -44,6 +44,26 @@ public class ClassTest {
 }
 ```
 
+## Tags
+
+### Test
+
+### BeforeEach
+
+### BeforeAll
+
+### AfterEach
+
+### AfterAll
+
+### Disabled
+
+No ejecuta el test. Se puede establecer a nivel de clase o de método. Permite definir una descripción
+
+### DisplayName
+
+Al ejecutar el test muestra esta descripción en vez del nombre del método
+
 ## Assertions
 
 ### grouped assertions
