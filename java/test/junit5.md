@@ -64,6 +64,19 @@ No ejecuta el test. Se puede establecer a nivel de clase o de método. Permite d
 
 Al ejecutar el test muestra esta descripción en vez del nombre del método
 
+### Conditional execution
+
+#### EnabledOnOs(&lt;OS>) DisabledOnOs(&lt;OS>)
+
+#### EnabledOnJre(&lt;jre>) DiabledOnJre(&lt;jre>)
+
+#### EnabledIfSystemProperty(&lt;name>, &lt;match>) DiabledIfSystemProperty(&lt;name>, &lt;match>)
+  
+#### EnabledIfEnvironmentVariable(&lt;name>, &lt;match>) DisabledIfEnvironmentVariable(&lt;name>, &lt;match>)
+
+#### EnabledIf(&lt;condition>) DisabledIf(&lt;condition>)
+  
+  
 ## Assertions
 
 ### grouped assertions
@@ -92,3 +105,8 @@ assertTimeoutPreemptively(<Duration>, <Executable>);
 ## Assumptions
 
 Sirve para comprobar ciertas premisas, si no se cumplen aborta el test
+
+Por ejemplo:
+```java
+assumeTrue("PRE".equals(System.getEnv("environment"));
+```
