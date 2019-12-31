@@ -88,3 +88,7 @@ assertTimeout(<Duration>, <Executable>);
 
 assertTimeoutPreemptively(<Duration>, <Executable>);
 ```
+
+## Assumptions
+
+Sirve para comprobar ciertas premisas, si no se cumplen aborta el test
