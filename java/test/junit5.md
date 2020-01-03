@@ -44,7 +44,7 @@ public class ClassTest {
 }
 ```
 
-## Tags
+## Annotations
 
 ### Test
 
@@ -63,6 +63,12 @@ No ejecuta el test. Se puede establecer a nivel de clase o de método. Permite d
 ### DisplayName
 
 Al ejecutar el test muestra esta descripción en vez del nombre del método
+
+### Tag
+Permite ejecutar solamente los test con cierto tag. Se puede establecer a nivel de clase o de método. Permite definir una etiqueta
+
+### Nested
+Se puede declarar una clase interna dentro del test, que se anotará con @Nested. Al ejecutar el test los resultados tendrán forma de árbol.
 
 ### Conditional execution
 
