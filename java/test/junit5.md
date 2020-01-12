@@ -81,7 +81,9 @@ Se puede declarar una clase interna dentro del test, que se anotará con @Nested
 #### EnabledIfEnvironmentVariable(&lt;name>, &lt;match>) DisabledIfEnvironmentVariable(&lt;name>, &lt;match>)
 
 #### EnabledIf(&lt;condition>) DisabledIf(&lt;condition>)
-  
+
+### TestMethodOrder
+Permite definir el orden en que se ejecutan los test. Uno de los métodos es por orden OrderAnnotation.class. El orden se especifica anotando cada método con la anotación @Order
   
 ## Assertions
 
