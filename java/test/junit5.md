@@ -85,6 +85,33 @@ Se puede declarar una clase interna dentro del test, que se anotará con @Nested
 ### TestMethodOrder
 Permite definir el orden en que se ejecutan los test. Uno de los métodos es por orden OrderAnnotation.class. El orden se especifica anotando cada método con la anotación @Order
   
+## Parameterized test - value source
+
+Hay que añadir la siguiente depencencia
+```xml
+<dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter.params</artifactId>
+  <version>${junit-platform.version}</version>
+</dependency>
+```
+
+Hay que anotar el test con @ParameterizedTest, y se le pueden parametros desde distintas fuentes: 
+@ValueSource(strings = {"", "", ...})
+@EnumSource(&lt;Enum&gt;.class)
+@CsvSource({"value11, value12, value13", "value21, value22, value33", ... })
+@CsvFileSource(resources = "/file.csv")
+@MethodSource("&lt;methodNamem&gt;)
+@ArgumentsSource(&lt;class&gt;.class)
+
+```java
+@ParameterizedTest
+@ValueSurce(string = {"", "", ""})
+void test(String value) {
+  ...
+}
+```
+
 ## Assertions
 
 ### grouped assertions
