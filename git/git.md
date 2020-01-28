@@ -99,6 +99,14 @@ commit realizado
 
 <kbd>$ git checkout &lt;commit&gt;</kbd>: mueve HEAD al commit &lt;commit&gt;
 
+### Rebase
+
+#### fixup
+With git commit --fixup and git rebase --autosquash. With these, you can easily merge little fixes with the original feature and keep your branch clean.
+
+<kbd>$ git commit --fixup &lt;commit&gt;</kbd>: automatically marks your commit as a fix of a previous commit
+<kbd>$ git rebase -i --autosquash</kbd>: automatically organize merging of these fixup commits and associated normal commits
+
 ### Tags
 
 <kbd>$ git tag</kbd>: muestra todos los tags creados.
