@@ -1,5 +1,21 @@
 # Spring REST
 
+## Spring 4.3.x
+Para que funcione correctamente es necesario establecer la anotación @EnableWebMvc o <mvc:annotation-driven /> en el xml. Enables default Spring MVC configuration and registers Spring MVC infrastructure components expected by the DispatcherServlet. Use this annotation on an @Configuration class. In turn that will import DelegatingWebMvcConfiguration, which provides default Spring MVC configuration. Y para que devuelva los resultados en json es necesario añadir las siguientes dependencias:
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>${jackson-version}</version>
+</dependency>
+
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson-version}</version>
+</dependency>
+```
+
 ## Directly expose Repository as Rest path
 We can create an application that accesses relational JPA data through a hypermedia-based RESTful front end.
 
