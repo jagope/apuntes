@@ -4,7 +4,7 @@
 
 ### @Configuration
 ```java
-@Configuraion
+@Configuration
 public <class> {
 	...
 }
@@ -27,6 +27,8 @@ public <interface> <method_name>() {
 	return new <interface>Impl();
 }
 ```
+Crea un bean
+
 ### @Autowired
 Inyectará automáticamente la dependencia en la propiedad donde esté definido. 
 Asocia el ```bean``` según este orden de criterio:
@@ -35,8 +37,6 @@ Asocia el ```bean``` según este orden de criterio:
  2. Se enlazará a un objeto que comparta el mismo tipo de dato y del cuál sólo exista uno en el contexto (```<bean_class>```) 
 
 Si no se dan ninguna de las dos situaciones lanzará una excepción a menos que se declare el atributo ```required``` y se establezca a ```false```
-
-Será necesario incluir la etiqueta ```<context:annotation-config />``` en el contexto de spring.
 
 ej: 
 ```java
@@ -114,7 +114,7 @@ Se establece en un método que se llamara cuando se vaya a destruir el bean
 ```xml
 <context:annotation-config/>
 ```
-Configura spring para que injecte los beans correspondientes en los campos anotados con @Autowired
+Activa las anotaciones de injección de dependencias en los beans registrados en el contexto: @Autowired, @Qualifier, @PostConstruct, @PreDestroy...
 
 ```xml
 <context:component-scan base-package="">
@@ -122,7 +122,7 @@ Configura spring para que injecte los beans correspondientes en los campos anota
 </context:component-scan>
 
 ```
-Configura spring para buscar componentes en los packages especificados
+Configura los packages en los que se tienen que buscar clases anotadas como componentes, esta clases serán registrados como beans
 
 ```xml
 <bean id="" class=""/>
