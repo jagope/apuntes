@@ -16,7 +16,28 @@ This env file will be loaded and will take precedence over the default property 
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-test</artifactId>
 	</dependency>
+``` 
+
+## Auto-Configured Tests
+
+### @DataJpaTest
+
+### @DataMongoTest
+
+To test MongoDB applications @DataMongoTest is a useful annotation. By default, it configures an in-memory embedded MongoDB if the driver is available through dependencies, configures a MongoTemplate, scans for @Document classes, and configures Spring Data MongoDB repositories.
+
+The mongo embedded dependency:
+```xml
+<dependency>
+    <groupId>de.flapdoodle.embed</groupId>
+    <artifactId>de.flapdoodle.embed.mongo</artifactId>
+    <scope>test</scope>
+</dependency>
 ```
+
+### @RestClientTest
+
+We generally use the @RestClientTest annotation to test REST clients. It auto-configures different dependencies like Jackson, GSON, and Jsonb support, configures a RestTemplateBuilder, and adds support for MockRestServiceServer by default.
 
 ## Integration Test
 
@@ -68,6 +89,8 @@ public class IntegrationTests {
     // tests
 }
 ```
+
+## Mocking with @MockBean
 
 # Security
 
