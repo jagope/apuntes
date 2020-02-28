@@ -209,7 +209,7 @@ public class PropertiesWithJavaConfig {
 @Component
 public <class> {
 
-	@Value("{<name_variable}")
+	@Value("${<name_variable}")
 	private int <atribute>;
 	
 	...
