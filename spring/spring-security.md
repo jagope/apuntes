@@ -20,6 +20,12 @@
 
 2. Create a spring security configuration file
 
+### Method level security
+```xml
+<security:global-method-security secured-annotations="enabled" />
+```
+annotate methods with <kbd>@Secured</kbd> annotation to allow method access for one or more than one roles
+
 ## annotation configuration
 1. Add <kbd>@EnableWebSecurity</kbd> to a configuration class that extends WebSecurityConfigurerAdapter
 2. 
