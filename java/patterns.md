@@ -33,13 +33,14 @@
 Creational patterns deal with the creation of objects.
 
 ## The Prototype Pattern <a id="prototype"></a>
+
 Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
 [Table of Contents](#menu)
 
 ## The Singleton pattern <a id="singleton"></a>
 
-The main idea of it is to ensure that only one single instance of the class could be created at any given time.
+Ensure a class only has one instance, and provide a global point of access to it.
 
 ### Types of instantiation:
 
