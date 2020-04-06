@@ -33,7 +33,7 @@
 Creational patterns deal with the creation of objects.
 
 ## The Prototype Pattern <a id="prototype"></a>
-A Prototype represents a fully initialized instance, to be copied or cloned.
+Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
 [Table of Contents](#menu)
 
@@ -131,7 +131,30 @@ public class Coffee {
 
 ## The Factory Pattern <a id="factory"></a>
 
-The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
+Define an interface for creating an object, but let subclasses decide which class to instantiate. The Factory method lets a class defer instantiation it uses to subclasses.
+
+```java
+public abstract class CocheFactory {
+	public Coche crea () {
+		Coche coche = creaCoche();
+
+		...
+
+		return coche;
+	}
+
+	protected abstract Coche creaCoche();
+}
+
+public class CocheInglesFactory extends CocheFactory {
+	protected Coche creaCoche() {
+		return new CochePilotoDerecha();
+	}
+}
+
+CocheFactory factory = new CocheInglesFactory();
+Coche coche = factory.crea();
+```
 
 ## The Abstract Factory Pattern <a id="abstractFactory"></a>
 
