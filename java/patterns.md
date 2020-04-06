@@ -321,3 +321,15 @@ Encapsulate a request as an object, thereby letting you parameterize clients wit
 Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 
 [Table of Contents](#menu)
+
+## The Iterator Pattern <a id="iterator"></a>
+
+Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+[Table of Contents](#menu)
+
+## The Visitor Pattern <a id="visitor"></a>
+
+Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
+[Table of Contents](#menu)
