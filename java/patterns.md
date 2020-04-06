@@ -4,7 +4,7 @@
 	* [The Singleton pattern](#singleton)
 	* [The Builder Pattern](#builder)
 	* [The Factory Pattern](#factory)
-	* Abstract Factory
+	* [Abstract Factory Pattern](#abstractFactory)
 2. [Structural Patterns](#structural)
 	1. [The Proxy Pattern](#proxy)
 	2. [The Decorator Pattern](#decorator)
@@ -133,7 +133,11 @@ public class Coffee {
 
 The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
 
+## The Factory Pattern <a id="abstractFactory"></a>
+
 [Table of Contents](#menu)
+
+(#abstractFactory)
 
 # Structural Patterns <a id="structural"></a>
 Structural patterns deal with the composition of objects.
