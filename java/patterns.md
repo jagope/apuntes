@@ -10,9 +10,9 @@
 	* [The Decorator Pattern](#decorator)
 	* [The Facade Pattern](#facade)
 	* [The Adapter pattern](#adapter)
-	* Bridge
-	* Composite
-	* Flyweight
+	* [Bridge](#bridge)
+	* [Composite](#composite)
+	* [Flyweight](#flyweight)
 3. [Behavioral Patterns](#behavioral)
 	* [Dependency injection](#dependecy)
 	* [Visitor](#visitor)
@@ -211,6 +211,14 @@ Convert the interface of a class into another interface clients expect. Adapter 
 Example:
 
 ![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/adapter.jpg)
+
+[Table of Contents](#menu)
+
+## Composite pattern <a id="composite"></a>
+
+Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/composite.jpg)
 
 [Table of Contents](#menu)
 
