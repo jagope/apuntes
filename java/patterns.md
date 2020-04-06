@@ -315,3 +315,9 @@ Avoid coupling the sender of a request to its receiver by giving more than one o
 Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations. Aka: Transaction
 
 [Table of Contents](#menu)
+
+## The Interpreter Pattern <a id="interpreter"></a>
+
+Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+
+[Table of Contents](#menu)
