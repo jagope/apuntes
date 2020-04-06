@@ -277,7 +277,7 @@ Behavioral patterns focus more on the behavior of objects, or more precisely, in
 
 ## The Visitor Pattern <a id="visitor"></a>
 
-Allows for one or more operation to be applied to a set of objects at runtime, decoupling the operations from the object structure.
+Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
 ```java
 public interface Visitable {
@@ -328,8 +328,8 @@ Provide a way to access the elements of an aggregate object sequentially without
 
 [Table of Contents](#menu)
 
-## The Visitor Pattern <a id="visitor"></a>
+## The Mediator Pattern <a id="mediator"></a>
 
-Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
 
 [Table of Contents](#menu)
