@@ -333,3 +333,9 @@ Provide a way to access the elements of an aggregate object sequentially without
 Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
 
 [Table of Contents](#menu)
+
+## The Memento Pattern <a id="memento"></a>
+
+Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later.
+
+[Table of Contents](#menu)
