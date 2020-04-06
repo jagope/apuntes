@@ -252,11 +252,17 @@ Example:
 
 [Table of Contents](#menu)
 
-## Composite pattern <a id="composite"></a>
+## The Composite Pattern <a id="composite"></a>
 
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
 ![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/composite.png)
+
+[Table of Contents](#menu)
+
+## The Flyweight Pattern <a id="flyweight"></a>
+
+Use sharing to support large numbers of fine-grained objects efficiently.
 
 [Table of Contents](#menu)
 
