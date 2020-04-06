@@ -1,18 +1,18 @@
 # Table of Contents <a id="menu"></a>
 1. [Creational Patterns](#creational)
 	* [The Prototype Pattern](#prototype)
-	* [The Singleton pattern](#singleton)
+	* [The Singleton Pattern](#singleton)
 	* [The Builder Pattern](#builder)
-	* [The Factory Pattern](#factory)
+	* [The Factory Method Pattern](#factory)
 	* [Abstract Factory Pattern](#abstractFactory)
 2. [Structural Patterns](#structural)
 	* [The Proxy Pattern](#proxy)
 	* [The Decorator Pattern](#decorator)
 	* [The Facade Pattern](#facade)
 	* [The Adapter pattern](#adapter)
-	* [Bridge](#bridge)
-	* [Composite](#composite)
-	* [Flyweight](#flyweight)
+	* [The Bridge Pattern](#bridge)
+	* [The Composite Pattern](#composite)
+	* [The Flyweight Pattern](#flyweight)
 3. [Behavioral Patterns](#behavioral)
 	* [Dependency injection](#dependecy)
 	* [Visitor](#visitor)
@@ -130,7 +130,7 @@ public class Coffee {
 
 [Table of Contents](#menu)
 
-## The Factory Pattern <a id="factory"></a>
+## The Factory Method Pattern <a id="factory"></a>
 
 Define an interface for creating an object, but let subclasses decide which class to instantiate. The Factory method lets a class defer instantiation it uses to subclasses.
 
@@ -218,7 +218,7 @@ Example:
 
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
-![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/composite.jpg)
+![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/composite.png)
 
 [Table of Contents](#menu)
 
