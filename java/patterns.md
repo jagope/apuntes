@@ -16,16 +16,16 @@
 3. [Behavioral Patterns](#behavioral)
 	* [Dependency injection](#dependecy)
 	* [Visitor](#visitor)
-	* Chain of responsibility
-	* Command
-	* Interpreter
-	* Iterator
-	* Mediator
-	* Memento
-	* Observer
-	* State
-	* Strategy
-	* Template Method
+	* [Chain of responsibility](#chain)
+	* [Command](#command)
+	* [Interpreter](#interpreter)
+	* [Iterator](#iterator)
+	* [Mediator](#mediator)
+	* [Memento](#memento)
+	* [Observer](#observer)
+	* [State](#state)
+	* [Strategy](#strategy)
+	* [Template Method](#template)
 	
 
 # Creational Patterns <a id="creational"></a>
@@ -275,7 +275,7 @@ Behavioral patterns focus more on the behavior of objects, or more precisely, in
 
 [Table of Contents](#menu)
 
-## Visitor
+## The Visitor Pattern <a id="visitor"></a>
 
 Allows for one or more operation to be applied to a set of objects at runtime, decoupling the operations from the object structure.
 
@@ -302,5 +302,16 @@ interface Visitor {
    public void visit(Cd cd);
 }
 ```
+[Table of Contents](#menu)
+
+## The Chain of Responsability Pattern <a id="chain"></a>
+
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it
+
+[Table of Contents](#menu)
+
+## The Command Pattern <a id="command"></a>
+
+Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations. Aka: Transaction
 
 [Table of Contents](#menu)
