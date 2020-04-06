@@ -194,7 +194,45 @@ A Proxy is an object that represents another object.
 
 ## The Decorator Pattern <a id="decorator"></a>
 
-The Decorator pattern allows us to add responsibilities to objects, dynamically.
+Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+Example:
+```java
+public interface Cafe {
+	public String descripcion();
+	public int precio();
+}
+
+public class CafeCorto implements Cafe {
+	public String descripcion() {
+		return "cafe corto";
+	}
+	public int precio() {
+		return 90;
+	}
+}
+
+public class ConLeche implements Cafe {
+	
+	private Cafe cafe;
+	
+	public ConLeche(Cafe cafe) {
+		this.cafe = cafe;
+	}
+	
+	@Override
+	public String descripcion() {
+		return cafe.descripcion() + " con leche";
+	}
+	
+	@Override
+	public int precio() {
+		return cafe.precio() + 20;
+	}
+}
+
+new ConLeche(new CafeCorto());
+```
 
 [Table of Contents](#menu)
 
