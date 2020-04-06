@@ -6,26 +6,26 @@
 	* [The Factory Pattern](#factory)
 	* [Abstract Factory Pattern](#abstractFactory)
 2. [Structural Patterns](#structural)
-	1. [The Proxy Pattern](#proxy)
-	2. [The Decorator Pattern](#decorator)
-	3. [The Facade Pattern](#facade)
-	4. [The Adapter pattern](#adapter)
-	5. Bridge
-	6. Composite
-	7. Flyweight
+	* [The Proxy Pattern](#proxy)
+	* [The Decorator Pattern](#decorator)
+	* [The Facade Pattern](#facade)
+	* [The Adapter pattern](#adapter)
+	* Bridge
+	* Composite
+	* Flyweight
 3. [Behavioral Patterns](#behavioral)
-	1. [Dependency injection](#dependecy)
-	2. [Visitor](#visitor)
-	4. Chain of responsibility
-	5. Command
-	8. Interpreter
-	9. Iterator
-	10. Mediator
-	11. Memento
-	12. Observer
-	13. State
-	14. Strategy
-	15. Template Method
+	* [Dependency injection](#dependecy)
+	* [Visitor](#visitor)
+	* Chain of responsibility
+	* Command
+	* Interpreter
+	* Iterator
+	* Mediator
+	* Memento
+	* Observer
+	* State
+	* Strategy
+	* Template Method
 	
 
 # Creational Patterns <a id="creational"></a>
@@ -184,31 +184,29 @@ public class FactoryRelacional implements AbstractFactory {
 
 [Table of Contents](#menu)
 
-(#abstractFactory)
-
 # Structural Patterns <a id="structural"></a>
 Structural patterns deal with the composition of objects.
 
-## The Proxy Pattern
+## The Proxy Pattern <a id="proxy"></a>
 A Proxy is an object that represents another object.
 
 [Table of Contents](#menu)
 
-## The Decorator Pattern
+## The Decorator Pattern <a id="decorator"></a>
+
 The Decorator pattern allows us to add responsibilities to objects, dynamically.
 
 [Table of Contents](#menu)
 
-## The Facade Pattern
+## The Facade Pattern <a id="facade"></a>
+
 A Facade is a single class that represents an entire subsystem.
 
 [Table of Contents](#menu)
 
-## Adapter pattern
+## Adapter pattern <a id="adapter"></a>
 
-An Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. An Adapter wraps an existing class with a new interface so that it becomes compatible with the client’s interface.
-
-The main motive behind using this pattern is to convert an existing interface into another interface that the client expects.
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces. Aka Wrapper
 
 Example:
 
