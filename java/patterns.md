@@ -238,7 +238,7 @@ new ConLeche(new CafeCorto());
 
 ## The Facade Pattern <a id="facade"></a>
 
-A Facade is a single class that represents an entire subsystem.
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 
 [Table of Contents](#menu)
 
