@@ -185,10 +185,12 @@ public class FactoryRelacional implements AbstractFactory {
 [Table of Contents](#menu)
 
 # Structural Patterns <a id="structural"></a>
+
 Structural patterns deal with the composition of objects.
 
 ## The Proxy Pattern <a id="proxy"></a>
-A Proxy is an object that represents another object.
+
+Provide a surrogate or placeholder for another object to control access to it.
 
 [Table of Contents](#menu)
 
