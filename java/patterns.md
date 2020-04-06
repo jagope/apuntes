@@ -91,7 +91,7 @@ public enum <enum_name> {
 
 ## The Builder Pattern <a id="builder"></a>
 
-The Builder Pattern separates object construction from its representation.
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
 ```java
 public class Coffee {
@@ -133,7 +133,30 @@ public class Coffee {
 
 The intent of the Factory Method pattern is to create a family of object types. It set an interface to produce an object, but allow sub classes to determine which class to instantiate. Factory method allows a class to delegate to sub classes
 
-## The Factory Pattern <a id="abstractFactory"></a>
+## The Abstract Factory Pattern <a id="abstractFactory"></a>
+
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+```java
+public interface RepositorioAlumnos {
+	public List<String> listaAlumnos();
+}
+
+public class RepositorioAlumnosRelacional implements RepositorioAlumnos { ... }
+
+public class RepositorioAlumnosNoSQL implements RepositorioAlumnos { ... }
+
+public interface AbstractFactory {
+	RepositorioAlumnos createRepositorioAlumnos();
+}
+
+public class FactoryRelacional implements AbstractFactory {
+	@Override
+	public RepositorioAlumnos createRepositorioAlumnos() {
+		return new RepositorioAlumnosRelacional();
+	}
+}
+```
 
 [Table of Contents](#menu)
 
