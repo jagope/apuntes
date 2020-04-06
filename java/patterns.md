@@ -339,3 +339,11 @@ Define an object that encapsulates how a set of objects interact. Mediator promo
 Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later.
 
 [Table of Contents](#menu)
+
+## The Observer Pattern <a id="observer"></a>
+
+Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and update automatically.
+
+![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/observer.jpeg)
+
+[Table of Contents](#menu)
