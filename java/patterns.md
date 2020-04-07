@@ -423,3 +423,11 @@ Define a family of algorithms, encapsulate each one, and make them interchangeab
 ![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/strategy.png)
 
 [Table of Contents](#menu)
+
+## The Template Method <a id="template"></a>
+
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+
+![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/template.jpg)
+
+[Table of Contents](#menu)
