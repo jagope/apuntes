@@ -347,3 +347,71 @@ Define a one-to-many dependency between objects so that when one object changes 
 ![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/observer.jpeg)
 
 [Table of Contents](#menu)
+
+## The State Pattern <a id="state"></a>
+
+Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+Example:
+```java
+public class Microondas {
+
+	// estado inicial
+	private Estado estado = Estado.APAGADO;
+
+	private enum Estado {
+ 		....
+ 	}
+
+	...
+}
+
+// por defecto no acepta las transiciones
+private enum Estado {
+	APAGADO {
+	 ...
+	}, ... ;
+
+	public Estado setPotenciaMin() {
+		System.out.println("No se permite operacion desde " + this);
+		return this;
+	}
+
+	public Estado setPotenciaMax() {
+		System.out.println("No se permite operacion desde " + this);
+		return this;
+	}
+
+	....
+
+	public Estado encender() {
+		System.out.println("No se permite operacion desde " + this);
+		return this;
+	}
+
+	public Estado apagar() {
+		System.out.println("No se permite operacion desde " + this);
+		return this;
+	}
+}
+
+// para cada estado sobreescribo las transiciones posibles
+APAGADO {
+	public Estado setPotenciaMin() {
+		System.out.println("fijada potencia mínima");
+		return Estado.POTENCIA_MIN;
+	}
+
+	public Estado setPotenciaMax() {
+		System.out.println("fijada potencia máxima");
+		return Estado.POTENCIA_MIN;
+	}
+
+	public Estado abrirPuerta() {
+		System.out.println("abriendo puerta");
+		return Estado.PUERTA_ABIERTA;
+	}
+}
+```
+
+[Table of Contents](#menu)
