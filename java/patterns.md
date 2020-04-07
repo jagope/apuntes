@@ -415,3 +415,11 @@ APAGADO {
 ```
 
 [Table of Contents](#menu)
+
+## The Strategy Pattern <a id="strategy"></a>
+
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+
+![Composite pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/strategy.png)
+
+[Table of Contents](#menu)
