@@ -254,6 +254,14 @@ Example:
 
 [Table of Contents](#menu)
 
+## The Bridge Pattern <a id="bridge"></a>
+
+Decouple an abstraction from its implementation so that the two can vary independently.
+
+![Adapter pattern class diagram](https://github.com/jagope/apuntes/blob/master/java/patterns_images/bridge.png)
+
+[Table of Contents](#menu)
+
 ## The Composite Pattern <a id="composite"></a>
 
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
