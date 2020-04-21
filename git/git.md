@@ -30,11 +30,13 @@ Añade el fichero &lt;file&gt;, o el directorio &lt;dir&gt;, o todos los fichero
 
 <kbd>$ git rm <file> -> elimina el fichero <file> de disco y añade la eliminación al area de staging</kbd>
 
-<kbd>$git commit [--amend] [-a] -m "descripcion del cambio" </kbd> realiza el commit de todo lo que haya en el area de staging.
+<kbd>$git commit [--amend] [-a] [-m <"descripcion">] [-p] </kbd> realiza el commit de todo lo que haya en el area de staging.
 
 [--amend] -> añade los cambios al último
 commit realizado
 [-a] -> realiza el commit saltandose el area de staging
+[-m <"descripcion">] -> para añadir una descripción al commit
+[-p] -> para commits parciales
 
 <kbd>$ git reset --soft HEAD^</kbd>: deshace el &uacute;ltimo commit y pone los cambios en la zona de staging.
 
