@@ -1,6 +1,11 @@
 # Spring Security
 
-## Configuration class
+## Configuration
+
+### Configuration xml
+TODO
+
+### Configuration class
 
 We have to create a configuration class that extends **WebSecurityConfigurerAdapter** class:
 
@@ -67,3 +72,7 @@ public String getUsers() {
     }
 }
 ```
+
+
+## Security taglibs
+TODO
