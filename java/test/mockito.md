@@ -15,7 +15,8 @@ public void init() {
 }
 ```
 
-se puede sustituir <kbd>MockitoAnnotations.initMocks(this);</kbd> por <kbd>@RunWith(MockitoJUnitRunner.class)</kbd>
+se puede sustituir <kbd>MockitoAnnotations.initMocks(this);</kbd> por <kbd>@RunWith(MockitoJUnitRunner.class)</kbd> en Junit 4,
+<kbd>@ExtendWith(MockitoExtension.class)</kbd> en junit 5
 
 ## when - return
 
