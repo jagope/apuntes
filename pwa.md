@@ -9,3 +9,119 @@ Create a directory for the app and add js, css, and images subdirectories. It sh
     /js
     /images
 ```
+
+## Writing the App Interface
+
+Create a file named index.html in your project root folder
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+</body>
+</html>
+```
+
+Next, create a file named style.css in the css folder and add a reference in then main.html file
+```html
+<head>
+  ...
+  <link rel="stylesheet" href="css/style.css">
+<head>
+```
+
+Next, create a file named scripts.js in the js folder
+
+## Add a Service Worker
+Create a file named sw.js in your root folder and enter the contents of the script below
+
+```js
+var cacheName = 'hello-pwa';
+var filesToCache = [
+  '/',
+  '/index.html',
+  '/css/style.css',
+  '/js/main.js'
+];
+
+/* Start the service worker and cache all of the app's content */
+self.addEventListener('install', function(e) {
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(filesToCache);
+    })
+  );
+});
+
+/* Serve cached content when offline */
+self.addEventListener('fetch', function(e) {
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
+});
+```
+
+The first lines of the script declares two variables: cacheName and filesToCache. cacheName is used to create an offline cache in the browser and give us access to it from Javascript. filesToCache is an array containing a list of all of the files that need to be cached. These files should be written in the form of URLs. Notice that the first one is simply “/”, the base URL. This is so the browser caches index.html even if the user doesn’t directly type in that file name.
+
+Next, we add a function to install the service worker and create the browser cache using cacheName. Once the cache is created it adds all of the files listed in the filesToCache array. (Please note that while this code works for demonstration purposes it is not intended for production as it will stop if it fails to load even one of the files.)
+Finally, we add a function to load in the cached files when the browser is offline.
+
+Now that the service worker script is created we need to register it with our app. Create a file named main.js in the js folder and enter the following code:
+
+```js
+window.onload = () => {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+}
+```
+
+Add the code to your app by including the script just before the closing </body> tag in index.html.
+
+```
+</div>
+  <script src="js/main.js"></script>
+</body>
+```
+
+## Add a Manifest
+
+The manifest is a json file that is used to specify how the app will look and behave on devices
+
+Save a file named manifest.json in your root folder and add the following content:
+
+```json
+{
+  "name": "Hello World",
+  "short_name": "Hello",
+  "lang": "en-US",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "white"
+}
+```
+
+To add the manifest to your app, link to it inside the index.html head tag like this:
+```html
+<head>
+...
+<link rel="manifest" href="/manifest.json">
+...
+</head>
+```
+
+You should also declare the theme color to match the one set in your manifest by adding a meta tag inside the head:
+<head>
+...
+<meta name="theme-color" content="white"/>
+...
+</head>
