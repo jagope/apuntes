@@ -36,7 +36,10 @@ Next, create a file named style.css in the css folder and add a reference in the
 Next, create a file named scripts.js in the js folder
 
 ## Add a Service Worker
-Create a file named sw.js in your root folder and enter the contents of the script below
+
+> The location of the service worker is important! For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.
+
+Create a file named sw.js in your root folder and enter the contents of the script below:
 
 ```js
 var cacheName = 'hello-pwa';
