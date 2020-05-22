@@ -94,7 +94,10 @@ self.addEventListener('fetch', function(event) {
 The first lines of the script declares two variables: cacheName and filesToCache. cacheName is used to create an offline cache in the browser and give us access to it from Javascript. filesToCache is an array containing a list of all of the files that need to be cached. These files should be written in the form of URLs. Notice that the first one is simply “/”, the base URL. This is so the browser caches index.html even if the user doesn’t directly type in that file name.
 
 Next, we add a function to install the service worker and create the browser cache using cacheName. Once the cache is created it adds all of the files listed in the filesToCache array. (Please note that while this code works for demonstration purposes it is not intended for production as it will stop if it fails to load even one of the files.)
-Finally, we add a function to load in the cached files when the browser is offline.
+
+Finally, we add a function to load from the cache, if the file not exists in the caches then load the file from the network.
+
+> The caches.match method find in all caches asociated at the app scope.
 
 ```js
 self.addEventListener('activate', (event) => {
