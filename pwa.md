@@ -39,7 +39,29 @@ Next, create a file named scripts.js in the js folder
 
 > The location of the service worker is important! For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.
 
-Create a file named sw.js in your root folder and enter the contents of the script below:
+Create a file named sw.js. Now we need to register the service worker, create a file named main.js in the js folder and enter the following code:
+
+```js
+window.onload = () => {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('./sw.js')
+    .then(() => console.log('Service Worker Registered'));;
+  }
+}
+```
+
+Add the code to your app by including the script just before the closing </body> tag in index.html.
+
+```
+</div>
+  <script src="js/main.js"></script>
+</body>
+```
+
+### cache files with the service worker
 
 ```js
 var cacheName = 'hello-pwa';
@@ -74,27 +96,6 @@ The first lines of the script declares two variables: cacheName and filesToCache
 Next, we add a function to install the service worker and create the browser cache using cacheName. Once the cache is created it adds all of the files listed in the filesToCache array. (Please note that while this code works for demonstration purposes it is not intended for production as it will stop if it fails to load even one of the files.)
 Finally, we add a function to load in the cached files when the browser is offline.
 
-Now that the service worker script is created we need to register it with our app. Create a file named main.js in the js folder and enter the following code:
-
-```js
-window.onload = () => {
-  'use strict';
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
-  }
-}
-```
-
-Add the code to your app by including the script just before the closing </body> tag in index.html.
-
-```
-</div>
-  <script src="js/main.js"></script>
-</body>
-```
-
 ## Add a Manifest
 
 The manifest is a json file that is used to specify how the app will look and behave on devices
@@ -123,8 +124,10 @@ To add the manifest to your app, link to it inside the index.html head tag like 
 ```
 
 You should also declare the theme color to match the one set in your manifest by adding a meta tag inside the head:
+```
 <head>
 ...
 <meta name="theme-color" content="white"/>
 ...
 </head>
+```
