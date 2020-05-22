@@ -63,7 +63,7 @@ Add the code to your app by including the script just before the closing </body>
 
 ### Cache strategies
 
-#### Cache only
+#### Cache first
 
 ```js
 var cacheName = 'hello-pwa';
