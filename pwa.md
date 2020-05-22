@@ -61,9 +61,7 @@ Add the code to your app by including the script just before the closing </body>
 </body>
 ```
 
-### Cache strategies
-
-#### Cache first
+### Cache Content
 
 ```js
 var cacheName = 'hello-pwa';
@@ -97,6 +95,23 @@ The first lines of the script declares two variables: cacheName and filesToCache
 
 Next, we add a function to install the service worker and create the browser cache using cacheName. Once the cache is created it adds all of the files listed in the filesToCache array. (Please note that while this code works for demonstration purposes it is not intended for production as it will stop if it fails to load even one of the files.)
 Finally, we add a function to load in the cached files when the browser is offline.
+
+```js
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (key !== CACHE_NAME) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+});
+```
+
+We'll use the activate event to clean up any old data in our cache. This code ensures that your service worker updates its cache whenever any of the app shell files change. In order for this to work, you'd need to increment the CACHE_NAME variable at the top of your service worker file.
 
 ## Add a Manifest
 
