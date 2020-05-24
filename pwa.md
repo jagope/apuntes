@@ -94,6 +94,48 @@ cache.put('/test.json', new Response('{"foo": "bar"}'));
 cache.put('https://example.com/data.json');
 ```
 
+The put() method is more permissive than either add() or addAll(), and will allow you to store non-CORS responses, or other responses where the status code of the response is not in the 200 range. It will overwrite any previous responses for the same request.
+
+### Retrieving from a cache
+To find an item in a cache, you can use the match method.
+
+```javascript
+const response = await cache.match(request);
+console.log(request, response);
+```
+
+If request is a string the browser converts it to a Request by calling new Request(request). The function returns a Promise that resolves to a Response if a matching entry is found, or undefined otherwise.
+
+To determine if two Requests match, the browser uses more than just the URL. Two requests are considered different if they have different query strings, Vary headers, or HTTP methods (GET, POST, PUT, etc.).
+
+If more than one cached request matches then the one that was created first is returned. If you want to retrieve all matching responses, you can use cache.matchAll().
+
+```javascript
+const options = {
+  ignoreSearch: true,
+  ignoreMethod: true,
+  ignoreVary: true
+};
+
+const responses = await cache.matchAll(request, options);
+console.log(`There are ${responses.length} matching responses.`);
+```
+
+As a shortcut you can search over all caches at once by using caches.match() instead of calling cache.match() for each cache.
+
+### Deleting an item
+
+To delete an item from a cache:
+
+```javascript
+cache.delete(request);
+```
+
+Where request can be a Request or a URL string.
+
+### Deleting a cache
+To delete a cache, call caches.delete(name). This function returns a Promise that resolves to true if the cache existed and was deleted, or false otherwise.
+
 ## Add a Service Worker
 
 > The location of the service worker is important! For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.
