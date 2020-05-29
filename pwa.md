@@ -25,7 +25,7 @@ Create a file named index.html in your project root folder
 </html>
 ```
 
-Next, create a file named style.css in the css folder and add a reference in then main.html file
+Next, create a file named style.css in the css folder and add a reference in then main.html file:
 ```html
 <head>
   ...
@@ -33,7 +33,12 @@ Next, create a file named style.css in the css folder and add a reference in the
 <head>
 ```
 
-Next, create a file named scripts.js in the js folder
+Next, create a file named app.js in the js folder and add a reference in then main.html file:
+```html
+<body>
+  ...
+  <script async src="js/appjs"></script>
+</body>
 
 ## Cache
 
