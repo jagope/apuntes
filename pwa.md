@@ -39,6 +39,7 @@ Next, create a file named app.js in the js folder and add a reference in then ma
   ...
   <script async src="js/appjs"></script>
 </body>
+```
 
 ## Cache
 
