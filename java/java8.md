@@ -1,5 +1,35 @@
 # java 8
 
+## Intefaces
+
+### Default methods
+
+Permite definir una implementación de un método por defecto. La clase que implemente el interfaz no está obligada a sobreescribir los métodos default.
+
+```java
+public interface MyIF {
+    default int getDefaultNumber() {
+       return 0;
+    }
+}  
+```
+
+### Static methods
+
+Actua de la misma forma que un metodo estatico definido en una clase. No es heredado por una clase que implemente el interfaz o por un subinterfaz.
+
+```java
+public interface MyIF {
+    static int getDefaultNumber() {
+        return 0;
+    }
+}
+
+...
+MyIF.getDefaultNumber();
+...
+```
+
 ## Lambda expressions
 
 * Lambda expressions are anonymous functions, which are like methods but without a class
