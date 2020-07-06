@@ -56,8 +56,64 @@ String s -> System.out.println(s)
 
 ##### BiConsumer<T>
 
-Operation that takes two valuea and returns no result
+Operation that takes two values and returns no result
 
 ```java
 (k, v) -> System.out.println("key: " + k + ", value: " + v)
+```
+
+##### Supplier
+
+The opposite of a consumer
+
+```java
+() -> callToAMethod()
+```
+
+##### Function<T,R>
+
+A function that accepts one argument and return a result. Type of argument and result may be diferent.
+
+```java
+student s -> s.getName()
+```
+
+##### BiFunction<T,U,R>
+
+A function that accepts two arguments and return a result.
+
+```java
+(String name, student s) -> new Teacher(name, s)
+```
+
+##### UnaryOperator<T>
+
+Specialised form of Function, accepts one argument and return a result of the sime type.
+
+```java
+String s -> s.toLowerCase()
+```
+
+##### BinaryOperator<T>
+
+Specialised form of BiFunction, accepts two arguments and return a result, all of the same type.
+
+```java
+(String x, String y) -> x + y
+```
+
+##### Predicate
+
+A boolean valued Function of one argument
+
+```java
+Student s -> s.graduationYear == 2011
+```
+
+##### BiPredicate
+
+A boolean valued Function of two arguments
+
+```java
+(path, attr) -> String.valueOf(path).endsWith(".js") && attr.size() > 1024
 ```
