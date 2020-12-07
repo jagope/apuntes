@@ -50,12 +50,20 @@ public class GreetControllerTest {
     ....
 }
 ```
+
 2. Inject MockMvc dependecy:
 ```java
 @Autowired
 private MockMvc mvc;
 ```
-3. Call to the controller inside a test:
+
+3. Mock the business logic, @MockBean automatically replaces the bean of the same type in the application context with a Mockito mock
+```java
+@MockBean
+private GreetService service;
+```
+
+4. Call to the controller inside a test:
 ```java
 mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATION_JSON)))
       .andExpect(MockMvcResultMatchers.status().isOk())
