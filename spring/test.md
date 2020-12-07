@@ -6,7 +6,7 @@
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ApplicationConfig.class })
 @WebAppConfiguration
-public class GreetControllerIntegrationTest {
+public class GreetControllerTest {
     ....
 }
 ```
@@ -43,6 +43,13 @@ mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATIO
 ## mvc test with spring boot
 
 1. Annotate the class with @WebMvcTest(&lt;controller>.class). It disables full auto-configuration and instead apply only configuration relevant to MVC tests. The WebMvcTest annotation auto-configure MockMvc instance as well. Using &lt;controller>.class as parameter, we are asking to initialize only one web controller and you need to provide remaining dependencies required using Mock objects.
+```java
+@ExtendWith(SpringExtension.class)
+@WebMvcTest(controllers = { GreetController.class })
+public class GreetControllerTest {
+    ....
+}
+```
 2. Inject MockMvc dependecy:
 ```java
 @Autowired
