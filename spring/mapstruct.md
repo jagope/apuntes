@@ -1,16 +1,17 @@
 # MapStruct
 
-## Dependency
+## Maven configuration
 ```xml
+<properties>
+	<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
+</properties>
+
 <dependency>
   <groupId>org.mapstruct</groupId>
   <artifactId>mapstruct-jdk8</artifactId>
   <version>${mapstruct.version}</version>
 </dependency>
-```
 
-## Annotation processor
-```xml
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-compiler-plugin</artifactId>
@@ -25,20 +26,18 @@
 			</path>
 		</annotationProcessorPaths>
 		<compilerArgs>
-
 			<arg>-Amapstruct.defaultComponentModel=spring</arg>
 		</compilerArgs>
 	</configuration>
 </plugin>
 ```
 
-## Work with lombock
+## The Mapper Interface
 
-If you use lombock and mapstruct together in sprinboot is necesary add the annotation processor of lombok
-
-```xml
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</path>
+```java
+@Mapper
+public interface <Object>Mapper {
+    SimpleDestination sourceToDestination(SimpleSource source);
+    SimpleSource destinationToSource(SimpleDestination destination);
+}
 ```
