@@ -13,7 +13,11 @@
 </dependency>
 ```
 
-## Versiones
+## Workbook
+
+Workbook interface is an high level representation of a Excel workbook. This is the first object most users will construct whether they are reading or writing a workbook
+
+### Workbook implementations
 
 * HSSFWorkbook (xls)
 * XSSFWorkbook (xlsx)
