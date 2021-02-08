@@ -38,6 +38,8 @@ public void setup() throws Exception {
 ```java
 mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATION_JSON)))
       .andExpect(MockMvcResultMatchers.status().isOk())
+      .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+      .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("valor"));
 ```
 
 ## mvc test with spring boot
