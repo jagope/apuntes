@@ -70,3 +70,7 @@ private GreetService service;
 mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATION_JSON)))
       .andExpect(MockMvcResultMatchers.status().isOk())
 ```
+
+## Profiles
+
+Podemos usar la anotación @ActiveProfiles para activar los profiles a usar durante la ejecución de los test
