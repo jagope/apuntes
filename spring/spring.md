@@ -14,11 +14,8 @@ public <class> {
 
 ```java
 @Profile(value="<profile_name>")
-public <class> {
-	...
-}
 ```
-Activa el profile &lt;profile_name&gt;
+Se puede asociar a una clase anotadas con @Configuration o a un método anotado con @Bean. La configuración o el bean solo se crearán cuando esté activo el profile &lt;profile_name&gt;. Los profiles activos se configuran con la variable spring.profiles.active=&lt;profile_name&gt;
 
 ### @Bean
 ```java
