@@ -7,6 +7,9 @@ After unzipping the VS Code download, create a data folder within VS Code's fold
 
 The data folder can be moved to other VS Code installations. This is useful for updating your portable VS Code version, in which case you can move the data folder to a newer extracted version of VS Code.
 
+# Settings Sync
+Enable settings sync
+
 # Extensions
 
 1. GitLens — Git supercharged
