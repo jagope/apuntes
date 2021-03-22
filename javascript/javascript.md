@@ -74,6 +74,14 @@ var a = [4, 5, 6];
 var b = [3, ...a, 7];
 ```
 
+También se puede usar para crear una copia de un array
+```javascript
+const oldArra = [1, 2, 3];
+const newArray = [...oldArray];
+
+const otherNewArray = [...oldArray, 6, 7];
+```
+
 # Object initializer shorthand
 Podemos eliminar los nombres de las propiedades cuando estas propiedades tienen el mismo nombre que la variable que le estamos asignando
 
