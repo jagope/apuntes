@@ -1,13 +1,19 @@
-# Configuration
-
-## Chrome extensions
-* React Developer Tools
-
 # React
 
-## Props
+## Environtment configuration
 
-## Hooks
+### Chrome extensions
+* React Developer Tools
 
-### useState
-### useContext
+## Create project
+
+```sh
+npx create-react-app <projectName>
+```
+
+### Props
+
+### Hooks
+
+#### useState
+#### useContext
