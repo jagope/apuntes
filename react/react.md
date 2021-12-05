@@ -22,6 +22,12 @@ In the settings add the following:
 npx create-react-app <projectName>
 ```
 
+## React router dom
+```sh
+npm install react-router-dom
+```
+
+
 ### Props
 
 ### Hooks
