@@ -1,11 +1,6 @@
 # Environment Specific Properties File
-If we need to target different environments, there's a built-in mechanism for that in Boot.
 
-We can simply define an “application-environment.properties” file in the “src/main/resources” directory – and then set a Spring profile with the same environment name.
-
-For example, if we define a “staging” environment, that means we'll have to define a staging profile and then application-staging.properties.
-
-This env file will be loaded and will take precedence over the default property file. Note that the default file will still be loaded, it's just that when there is a property collision the environment specific property file takes precedence.
+Define an “application-environment.properties” file in the “src/main/resources” directory and then set a Spring profile with the same environment name.
 
 # Test
 
@@ -110,7 +105,7 @@ public class IntegrationTests {
 public class Configuration() {
 	...
 }
-´´´
+```
 
 ```java
 @Scheduled(fixedRate=60000)
@@ -118,3 +113,17 @@ public void method() {
 	...
 }
 ```
+
+# Speed up startup time
+
+Configure lazy initializacion and disable the MBeans that monitor the application using JMX
+
+```yml
+spring:
+  main:
+    lazy-initialization: true
+  jmx:
+    enabled: false
+```
+
+Use -Xverify:none and -XX:TieredStopAtLevel-1 jvm options
