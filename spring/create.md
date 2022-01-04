@@ -18,6 +18,13 @@ Example of swagger codegen configuration:
     <groupId>io.swagger.codegen.v3</groupId>
     <artifactId>swagger-codegen-maven-plugin</artifactId>
     <version>3.0.31</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.jknack</groupId>
+            <artifactId>handlebars</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+    </dependencies>
     <executions>
         <execution>
             <goals>
@@ -37,29 +44,18 @@ Example of swagger codegen configuration:
     </configuration>
 </plugin>
 ```
+Note: with the 3.0.31 an error is produced, this error can be solved forcing to use an updated version of handlebars
 
 Open API [config options for spring](https://openapi-generator.tech/docs/generators/spring/)
 
-add the needed dependencies
+## Show de api
+
+Add springdoc dependency to the project, this add the endpoint /swagger-ui/index.html
 
 ```xml
 <dependency>
-  <groupId>javax.validation</groupId>
-  <artifactId>validation-api</artifactId>
-</dependency>
-<dependency>
-  <groupId>io.springfox</groupId>
-  <artifactId>springfox-swagger2</artifactId>
-  <version>2.9.2</version>
-</dependency>
-<dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>jackson-databind-nullable</artifactId>
-  <version>0.2.2</version>
-</dependency>
-<dependency>
-  <groupId>io.swagger.core.v3</groupId>
-  <artifactId>swagger-annotations</artifactId>
-  <version>2.1.12</version>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>1.6.3</version>
 </dependency>
 ```
