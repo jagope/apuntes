@@ -59,3 +59,16 @@ Add springdoc dependency to the project, this add the endpoint /swagger-ui/index
     <version>1.6.3</version>
 </dependency>
 ```
+
+## Test of the API
+
+### Integration test
+
+To use WebTestClient is necesary to include the spring-webflux dependency
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-webflux</artifactId>
+</dependency>
+```
