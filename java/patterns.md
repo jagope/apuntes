@@ -5,6 +5,7 @@
 	* [The Builder Pattern](#builder)
 	* [The Factory Method Pattern](#factory)
 	* [Abstract Factory Pattern](#abstractFactory)
+	* [Object Mother](#objectMother)
 2. [Structural Patterns](#structural)
 	* [The Proxy Pattern](#proxy)
 	* [The Decorator Pattern](#decorator)
@@ -181,6 +182,11 @@ public class FactoryRelacional implements AbstractFactory {
 	}
 }
 ```
+
+[Table of Contents](#menu)
+
+## The Object Mother Pattern <a id="objectMother"></a>
+The Object Mother pattern is essentially a special case of the Factory pattern used for creating test objects. It provides one or more factory methods that each create an object in a specific, meaningful configuration.
 
 [Table of Contents](#menu)
 
