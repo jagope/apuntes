@@ -20,19 +20,3 @@ Independent: los test deben ser independientes unos de otros. El resultado de un
 Repeatable: los test deben poder ejecutarse en cualquier entorno (desarrollo, pre-producción, producción…). De no ser así, siempre tendremos una excusa para cuando los test fallen.
 Self-Validating: los test deben devolver una respuesta booleana. Pasan o no pasan. No deben dejar una cadena de caracteres en un fichero de log que tengamos que comprobar nosotros mismos, o dejar dos ficheros de un tamaño determinado que, igualmente tengamos que comprobar. De lo contrario, requerirán una alta evaluación manual que nos hará perder tiempo y precisión.
 Timely: los test deben ser escritos antes que el código de producción. De no ser así, el código de producción será difícil de testear.
-
-### Single Responsibility Principle
-
-El principio de Responsabilidad Única (la S de los principios SOLID), hace referencia al diseño de nuestras clases. Dice que: «una clase debe tener una y solo una razón para cambiar». Debe tener una única responsabilidad.
-
-### Open Closed Principle
-
-Otro de los principios SOLID (en este caso la O), igualmente hace referencia al diseño de nuestras clases y está estrechamente relacionado con SRP.
-
-Dice que: «una clase debe estar abierta a extensiones pero cerrada a modificaciones». O lo que es lo mismo, el comportamiento de dicha clase debe ser alterado sin tener que modificar su código fuente. De lo contrario podría desencadenar efectos colaterales.
-
-Si cambiasen los requisitos, el comportamiento de la clase debe ser extendido, no modificado. La inyección de dependencias también nos puede ayudar en esta tarea.
-
-### Dependency Inversion Principle
-
- Nuestras clases deben depender de abstracciones, nunca de detalles concretos. De esta forma podremos tener nuestras entidades desacopladas facilitando su mantenimiento.
