@@ -2,7 +2,7 @@
 
 ## springboot
 
-1. Annotate the the test class with:
+1. Annotate the test class with:
 ```java
 @SpringBootTest(classes = {TestApplication.class}, webEnvironment = WebEnvironment.MOCK)
 @ActiveProfiles({"test"})
