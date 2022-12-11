@@ -1,6 +1,34 @@
-# Spring mvc test
+# Integration test
 
-## mvc test
+## springboot
+
+1. Annotate the the test class with:
+```java
+@SpringBootTest(classes = {TestApplication.class}, webEnvironment = WebEnvironment.MOCK)
+@ActiveProfiles({"test"})
+@AutoConfigureMockMvc
+public class IntegrationTest {
+    ....
+}
+```
+
+2. Inject MockMvc bean:
+```java
+@Autowired
+private MockMvc mvc;
+```
+
+3. Call to the endpoint inside a test:
+```java
+final var result = mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATION_JSON))))
+```
+
+4. Check the result
+```java
+result.andExpect(MockMvcResultMatchers.status().isOk();
+```
+
+## spring
 1. Add annotations to the class:
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -41,36 +69,3 @@ mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATIO
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
       .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("valor"));
 ```
-
-## mvc test with spring boot
-
-1. Annotate the class with @WebMvcTest(&lt;controller>.class). It disables full auto-configuration and instead apply only configuration relevant to MVC tests. The WebMvcTest annotation auto-configure MockMvc instance as well. Using &lt;controller>.class as parameter, we are asking to initialize only one web controller and you need to provide remaining dependencies required using Mock objects.
-```java
-@ExtendWith(SpringExtension.class)
-@WebMvcTest(controllers = { GreetController.class })
-public class GreetControllerTest {
-    ....
-}
-```
-
-2. Inject MockMvc dependecy:
-```java
-@Autowired
-private MockMvc mvc;
-```
-
-3. Mock the business logic, @MockBean automatically replaces the bean of the same type in the application context with a Mockito mock
-```java
-@MockBean
-private GreetService service;
-```
-
-4. Call to the controller inside a test:
-```java
-mvc.perform(MockMvcRequestBuilders.get("/employees").accept(MediaType.APPLICATION_JSON)))
-      .andExpect(MockMvcResultMatchers.status().isOk())
-```
-
-## Profiles
-
-Podemos usar la anotación @ActiveProfiles para activar los profiles a usar durante la ejecución de los test
