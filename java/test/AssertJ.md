@@ -9,3 +9,10 @@ assertThat(TO_BE_TESTED)
   .returns(EXPECTED.isOnSale(), from(Product::isOnSale))
   .doesNotReturn(EXPECTED.getId(), from(Product::getId));
 ```
+
+## exceptions
+```java
+final var throwable = catchThrowable(() -> ...);
+
+then(throwable).isInstanceOf(StatusConflictException.class);
+```
