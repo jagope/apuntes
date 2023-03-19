@@ -1,37 +1,6 @@
 # JUnit 5
 
-JUnit 5 requires Java 8 (or higher) at runtime. However, you can still test code that has been compiled with previous versions of the JDK.
-
 ## Use in spring boot
-
-### How to configure
-
-Exclude junit in the spring-boot-starter-test, and include the JUnit 5 jupiter engine dependency
-
-```xml
-<dependencies>
-  ...
-  <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-test</artifactId>
-    <scope>test</scope>
-    <exclusions>
-      <exclusion>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-      </exclusion>
-    </exclusions>
-  </dependency>
-
-  <dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-engine</artifactId>
-    <version>${junit-jupiter.version}</version>
-    <scope>test</scope>
-  </dependency>
-  ...
-</dependecies>
-```
 
 ### How to write test
 
@@ -127,7 +96,10 @@ assertAll(
 ### assert exceptions
 
 ```java
-assertThrows(<Exception>.class, <Executable>);
+import org.junit.jupiter.api.function.Executable;
+
+final Executable executable = () -> ...;
+assertThrows(<Exception>.class, executable);
 ```
 
 ### assert timeout
@@ -145,3 +117,14 @@ Por ejemplo:
 ```java
 assumeTrue("PRE".equals(System.getEnv("environment"));
 ```
+
+## ExtendWith
+Allow to extend the behavior of test classes and methods.
+
+To implement an extension you have to implement of of the following interfaces:
+* TestInstancePostProcessor - executed after the test has been created, can be used to inject dependencies into the test instance
+* ExecutionCondition - used to disable tests based on conditions
+* ParameterResolver - used to resolve parameters for test methods
+* TestExecutionExceptionHandler - used to handle exceptions
+
+You can also add lifecycle callbacks: * BeforeAllCallback / AfterAllCallback - executed before / after all test methods in the test class * BeforeEachCallBack / AfterEachCallback – executed before / after each test method
