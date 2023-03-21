@@ -10,6 +10,18 @@ By default, the query definition uses JPQL.
 Collection<User> findAllActiveUsers();
 ```
 
+### Joins
+```java
+  @Query("SELECT s, d FROM AccountingFlowStatus s LEFT JOIN s.accountingFlowStatusDetails d WHERE s.monitorId = :monitorId")
+  List<AccountingFlowStatus> findAll(@Param("monitorId") Long monitorId);
+```
+
+For fetching lazy-loaded associations eagerly for the current query add FETCH to the JOIN
+```java
+  @Query("SELECT s, d FROM AccountingFlowStatus s LEFT JOIN FETCH s.accountingFlowStatusDetails d WHERE s.monitorId = :monitorId")
+  List<AccountingFlowStatus> findAll(@Param("monitorId") Long monitorId);
+```
+
 ### Pagination
 ```java
 @Query(value = "SELECT u FROM User u ORDER BY id")
