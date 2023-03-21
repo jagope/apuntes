@@ -10,12 +10,28 @@ By default, the query definition uses JPQL.
 Collection<User> findAllActiveUsers();
 ```
 
+### Pagination
+```java
+@Query(value = "SELECT u FROM User u ORDER BY id")
+Page<User> findAllUsersWithPagination(Pageable pageable);
+```
+
 ## Native
 We can use native SQL to define our query setting nativeQuery attribute to true and define the native SQL query in the value attribute of the annotation:
 
 ```java
 @Query( value = "SELECT * FROM USERS u WHERE u.status = 1", nativeQuery = true)
 Collection<User> findAllActiveUsersNative();
+```
+
+### Pagination
+
+```java
+@Query(
+  value = "SELECT * FROM Users ORDER BY id", 
+  countQuery = "SELECT count(*) FROM Users", 
+  nativeQuery = true)
+Page<User> findAllUsersWithPagination(Pageable pageable);
 ```
 
 ## Named Parameters
