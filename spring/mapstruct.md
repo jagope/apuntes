@@ -27,6 +27,25 @@ public interface EmployeeMapper {
 }
 ```
 
+### Custom mapper
+Create a method with the return type we want and the argument we need to convert. We have to use the @Named annotation with the value parameter to inform MapStruct about the custom mapper method.
+
+In the mapper interface method with the @Mapping annotation tell MapStruct about the source type, target type, and the method it will use:
+
+```java
+@Mapper
+public interface UserBodyValuesMapper {
+    
+    @Mapping(source = "inch", target = "centimeter", qualifiedByName = "inchToCentimeter")
+    public UserBodyValues userBodyValuesMapper(UserBodyImperialValuesDTO dto);
+    
+    @Named("inchToCentimeter") 
+    public static double inchToCentimeter(int inch) { 
+        return inch * 2.54; 
+    }
+}
+```
+
 ### Before-Mapping and After-Mapping Annotations
 Here's another way to customize @Mapping capabilities by using @BeforeMapping and @AfterMapping annotations. The annotations are used to mark methods that are invoked right before and after the mapping logic.
 ```java
