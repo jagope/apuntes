@@ -48,3 +48,12 @@ public int hashCode() {
 final Map< String, Collection< String > > map = new HashMap<>();
 ```
 The compiler is able to infer the generics type parameters from the left side and allows omitting them in the right side of the expression
+
+## Using underscores in literals to improve code readability
+Numerical literals can contain underscore charactets (\_) to improve the readability of code by separating digits of a literal into significant groups at almost any arbitrary place.
+
+```java
+long debitCard = 1234_5678_9876_5432L;
+long amount = 1_000_000; 
+```
+
