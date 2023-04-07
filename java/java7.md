@@ -49,7 +49,7 @@ final Map< String, Collection< String > > map = new HashMap<>();
 ```
 The compiler is able to infer the generics type parameters from the left side and allows omitting them in the right side of the expression
 
-## Using underscores in literals to improve code readability
+## Underscores in literals
 Numerical literals can contain underscore charactets (\_) to improve the readability of code by separating digits of a literal into significant groups at almost any arbitrary place.
 
 ```java
@@ -57,3 +57,11 @@ long debitCard = 1234_5678_9876_5432L;
 long amount = 1_000_000; 
 ```
 
+## try-with-resources
+Allows us to declare resources to be used in a try block with the assurance that the resources will be closed after the execution of that block. The resources declared need to implement the AutoCloseable interface.
+
+```java
+try (PrintWriter writer = new PrintWriter(new File("test.txt"))) {
+    writer.println("Hello World");
+}
+```
