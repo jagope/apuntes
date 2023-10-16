@@ -1,3 +1,27 @@
+# Openapi specification
+```yml
+openapi: "<openapi version>"
+```
+
+# Info
+```yml
+info:
+  title: <title>
+  version: "<api version>"
+  contact:
+    name: "<name>"
+    email: "<email>"
+```
+
+# Servers
+```yml
+servers:
+  - url: <url>
+    description: <description>
+  - ...
+```
+
+
 # Paths
 ```yml
 paths:
