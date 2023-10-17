@@ -39,8 +39,10 @@ paths:
       responses:
         <http code>
           description:
-          schema:
-            $ref: '#/schemas/<name>'
+          content:
+            application/json:
+              schema:
+                $ref: '#/schemas/<name>'
 ```
 
 # Schemas
